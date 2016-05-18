@@ -836,7 +836,6 @@ ul {
 
 .page-header {
   background-color: #5a497f;
-  height: 1em;
   color: #ffde00; }
 
 .page-title {
@@ -1090,3 +1089,7 @@ entry-footer {
 .social-share > iframe {
   vertical-align: bottom;
   margin-right: 5px; }
+
+.block__content {
+  width: 1000px;
+  margin: 0 auto; }
