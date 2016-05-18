@@ -1,0 +1,42 @@
+#latest-about-homelessness-posts,
+#latest-news-posts,
+#latest-stories-posts {
+    margin-top: -0.75em;
+}
+
+#latest-about-homelessness-posts h3,
+#latest-news-posts,
+#latest-stories-posts {
+    margin-bottom: -0.75em;
+}
+
+.container-cat-titles {
+    padding-left: 1em;
+}
+
+.container-cat-titles .entry-header {
+    margin-bottom: 0.5em;
+}
+
+.container-post-excerpt {
+    padding-left: 1em;
+}
+
+.container-post-excerpt > h3 {
+    padding-top: 0.5em;
+    color: $brand-h;
+}
+
+.container-cat-titles > h3 {
+    margin-bottom: -0.5em;
+    color: $brand-h;
+}
+
+.cat-excerpt-entry-header {
+    margin-left: -1em;
+    padding-bottom: 0.25em;
+}
+
+.news-latest-entry-header {
+    margin-left: -1em;
+}

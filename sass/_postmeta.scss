@@ -1,0 +1,29 @@
+.info-container {
+    padding-top: 2em;
+}
+
+.entry-meta {
+    float: right !important;
+    font-size: 0.75em;
+}
+
+time.entry-date.published {
+    color: $brand-b;
+}
+
+a.url.fn.n {
+    color: $brand-b;
+}
+
+.cat-links > a,
+a.more-link {
+    color: $brand-b;
+}
+
+.entry-content > p > a {
+    color: $brand-b;
+}
+
+a.more-link {
+    font-size: 0.8em;
+}

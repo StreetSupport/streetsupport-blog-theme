@@ -1,0 +1,38 @@
+#colophon {
+    background: linear-gradient($brand-l, $brand-m);
+    color: #fff;
+    text-align: center;
+}
+
+.container-footer {
+    padding-top: 3em;
+    padding-top: 0;
+    margin-top: 1em;
+}
+
+.site-footer {
+    height: 10em;
+}
+
+.footer__copy {
+    font-size: 0.8em;
+    margin-top: 1em;
+    padding-bottom: 1em !important;
+}
+
+.footer__header {
+    display: inline-block;
+}
+
+.footer__social-list {
+    display: block;
+}
+/* was this doing anything below?
+
+entry-footer {
+	padding-top: 0.6em;
+	padding-bottom: 0.6em;
+	background-color: $brand-d;
+}
+
+*/
