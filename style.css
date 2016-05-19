@@ -795,6 +795,9 @@ p,
 ul {
   line-height: 1.4; }
 
+.small {
+  font-size: 0.9em; }
+
 #masthead {
   background-color: #38ae8e; }
 
@@ -848,15 +851,25 @@ ul {
 .page-title > a {
   color: #ffde00; }
 
-#latest-about-homelessness-posts,
-#latest-news-posts,
-#latest-stories-posts {
-  margin-top: -0.75em; }
+.front-page__news {
+  padding: 30px 0;
+  text-align: center; }
+  .front-page__news .h1 {
+    text-align: left; }
 
-#latest-about-homelessness-posts h3,
-#latest-news-posts,
-#latest-stories-posts {
-  margin-bottom: -0.75em; }
+.front-page__news-list:before, .front-page__news-list:after {
+  display: table;
+  content: ' '; }
+
+.front-page__news-list:after {
+  clear: both; }
+
+.front-page__news-item {
+  width: 33%;
+  float: left;
+  text-align: left; }
+  .front-page__news-item .entry-title {
+    line-height: 1.4em; }
 
 .container-cat-titles {
   padding-left: 1em; }

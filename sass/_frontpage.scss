@@ -1,14 +1,27 @@
-#latest-about-homelessness-posts,
-#latest-news-posts,
-#latest-stories-posts {
-    margin-top: -0.75em;
+.front-page {
+    &__news {
+        padding: 30px 0;
+        text-align: center;
+        .h1 {
+            text-align: left;
+        }
+    }
+    &__news-list {
+        @include cf();
+    }
+    &__news-item {
+        width: 33%;
+        float: left;
+        text-align: left;
+        .entry-title {
+            line-height: 1.4em;
+        }
+    }
 }
 
-#latest-about-homelessness-posts h3,
-#latest-news-posts,
-#latest-stories-posts {
-    margin-bottom: -0.75em;
+#latest-news-posts {
 }
+
 
 .container-cat-titles {
     padding-left: 1em;
