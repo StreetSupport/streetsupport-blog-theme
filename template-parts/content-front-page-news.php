@@ -10,10 +10,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" class="front-page__news-item" <?php post_class(); ?>>
-	<header class="entry-header news-latest-entry-header">
 		<?php
 			the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
-      the_date('d/m/y', '<p class="small">Posted on: ', '</p>')
 		?>
-	</header>
+    <p class="small">Posted on: <?php echo the_time('d/m/y'); ?></p>
+    <p><?php echo get_post_meta(get_the_ID(), 'front-page-snippet', true); ?></p>
+    <p><a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">Read More</a></p>
 </article>

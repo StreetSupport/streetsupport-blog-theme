@@ -10,12 +10,16 @@
         @include cf();
     }
     &__news-item {
+        box-sizing: border-box;
         width: 33%;
         float: left;
         text-align: left;
         .entry-title {
             line-height: 1.4em;
         }
+        &:nth-child(1n) { padding-right: 10px }
+        &:nth-child(2n) { padding: 0 10px }
+        &:nth-child(3n) { padding-left: 10px }
     }
 }
 

@@ -32,7 +32,7 @@ Template Name: front-page
 				get_template_part( 'template-parts/content-front-page-news', 'page' );
 			endwhile; ?>
 		</div>
-		<button class="btn btn--brand-e"><span class="btn__text">Read More News</span></button>
+		<a href="<?php echo get_site_url (); ?>/category/news" class="btn btn--brand-d"><span class="btn__text">Read More News</span></a>
 	</div>
 </div>
 

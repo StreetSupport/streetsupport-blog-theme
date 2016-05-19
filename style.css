@@ -1,3 +1,70 @@
+.btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  appearance: none;
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  text-align: center;
+  outline: none;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 20px; }
+  .btn:hover .btn__text {
+    box-shadow: none; }
+  .btn__icon {
+    width: 100%;
+    display: block;
+    background: linear-gradient(#ADE1F9, #FFFFFF);
+    border-radius: 10px 10px 0 0;
+    position: relative; }
+    .btn__icon svg {
+      width: 100%;
+      height: 110px; }
+    .btn__icon--pledge svg {
+      height: 80px;
+      margin: 20px 0 10px 12px; }
+    .btn__icon + span {
+      border-radius: 0 0 10px 10px; }
+  .btn__text {
+    display: block;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: background-color 250ms linear, box-shadow 250ms linear;
+    margin-bottom: 3px; }
+  .btn__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 250ms linear;
+    border-radius: 10px 10px 0 0; }
+  .btn--brand-d .btn__text {
+    background-color: #ffa200;
+    color: #fff;
+    box-shadow: 0px 3px 0px 0px #b37100; }
+    .btn--brand-d .btn__text:hover {
+      background-color: #e69200; }
+  .btn--brand-e .btn__text {
+    background-color: #ffde00;
+    color: #101011;
+    box-shadow: 0px 3px 0px 0px #b39b00; }
+    .btn--brand-e .btn__text:hover {
+      background-color: #e6c800; }
+  .btn--brand-g .btn__text {
+    background-color: #a90000;
+    color: #fff;
+    box-shadow: 0px 3px 0px 0px #5d0000; }
+    .btn--brand-g .btn__text:hover {
+      background-color: #900000; }
+  .btn--plain .btn__text {
+    box-shadow: none;
+    border-radius: 0; }
+
 /*
 Theme Name: ssnblog
 Theme URI: http://underscores.me/
@@ -865,11 +932,18 @@ ul {
   clear: both; }
 
 .front-page__news-item {
+  box-sizing: border-box;
   width: 33%;
   float: left;
   text-align: left; }
   .front-page__news-item .entry-title {
     line-height: 1.4em; }
+  .front-page__news-item:nth-child(1n) {
+    padding-right: 10px; }
+  .front-page__news-item:nth-child(2n) {
+    padding: 0 10px; }
+  .front-page__news-item:nth-child(3n) {
+    padding-left: 10px; }
 
 .container-cat-titles {
   padding-left: 1em; }
@@ -1014,7 +1088,8 @@ a.more-link {
   text-align: center;
   padding-top: 1.5em !important;
   padding-left: 1em;
-  padding-right: 1em !important; }
+  padding-right: 1em !important;
+  margin-bottom: 40px; }
   .divider__line {
     display: block;
     width: 100%;
