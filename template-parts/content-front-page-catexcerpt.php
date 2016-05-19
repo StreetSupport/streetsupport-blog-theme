@@ -18,13 +18,13 @@
 				the_content( 
 					sprintf(
 						/* translators: %s: Name of current post. */
-						wp_kses( 
-							__( 'Read more %s <span class="meta-nav">&rarr;</span>', 'ssnblog' ), 
-							array( 'span' => array( 'class' => array() )) 
-						),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					) 
 				);
 		?>
+    <p class="small front-page__news-item__meta">
+      <span class="posted-on">Posted on: <?php echo the_time('d/m/y'); ?></span>
+      <a class="read-more" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">Read More</a>
+    </p>
 	</header>
 </article>

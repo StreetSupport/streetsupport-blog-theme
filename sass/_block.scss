@@ -1,6 +1,12 @@
 .block {
+
   &__content {
+    @include cf();
     width: 1000px;
     margin: 0 auto;
+  }
+
+  &--highlight { 
+    background: $brand-i;
   }
 }

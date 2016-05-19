@@ -10,6 +10,7 @@
         @include cf();
     }
     &__news-item {
+        background: none;
         box-sizing: border-box;
         width: 33%;
         float: left;
@@ -21,14 +22,14 @@
         &:nth-child(2n) { padding: 0 10px }
         &:nth-child(3n) { padding-left: 10px }
     }
+    &__news-item__meta {
+        @include cf();
+        .posted-on { float: left; }
+        .read-more { float: right; }
+    }
 }
 
 #latest-news-posts {
-}
-
-
-.container-cat-titles {
-    padding-left: 1em;
 }
 
 .container-cat-titles .entry-header {
@@ -36,7 +37,10 @@
 }
 
 .container-post-excerpt {
-    padding-left: 1em;
+    width: 50%;
+    float: left;
+    &:nth-child(1n) { padding-right: 10px; }
+    &:nth-child(2n) { padding-left: 10px; }
 }
 
 .container-post-excerpt > h3 {

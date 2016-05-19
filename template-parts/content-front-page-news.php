@@ -11,9 +11,11 @@
 
 <article id="post-<?php the_ID(); ?>" class="front-page__news-item" <?php post_class(); ?>>
 		<?php
-			the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
+			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 		?>
-    <p class="small">Posted on: <?php echo the_time('d/m/y'); ?></p>
     <p><?php echo get_post_meta(get_the_ID(), 'front-page-snippet', true); ?></p>
-    <p><a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">Read More</a></p>
+    <p class="small front-page__news-item__meta">
+      <span class="posted-on">Posted on: <?php echo the_time('d/m/y'); ?></span>
+      <a class="read-more" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">Read More</a>
+    </p>
 </article>
