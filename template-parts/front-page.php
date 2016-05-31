@@ -51,19 +51,15 @@ Template Name: front-page
 		<div id="latest-categories" class="front-page__categories container-cat-titles">
 			<h1 class="h1">Categories</h1>
 			<div class="front-page__category-list">
-				<?php query_posts('category_name=news&showposts=3');
-				while ( have_posts() ) : the_post();
-					get_template_part( 'template-parts/content-front-page-categories', 'page' );
-				endwhile; ?>
+				<?php get_template_part( 'template-parts/content-front-page-categories', 'page' );
+				?>
 			</div>
 		</div>
 		<div id="latest-comments" class="front-page__comments container-cat-titles">
 			<h1 class="h1">Recent Comments</h1>
 			<div class="front-page__comments-list">
-				<?php query_posts('category_name=news&showposts=3');
-				while ( have_posts() ) : the_post();
-					get_template_part( 'template-parts/content-front-page-comments', 'page' );
-				endwhile; ?>
+				<?php get_template_part( 'template-parts/content-front-page-comments', 'page' );
+				 ?>
 			</div>
 		</div>
 	</div>

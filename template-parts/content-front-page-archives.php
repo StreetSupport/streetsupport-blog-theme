@@ -17,9 +17,6 @@ foreach($months as $month) :
 		if ($year_prev != null){?>
 		
 		<?php } ?>
-	
-	<li class="archive-year"><a href="<?php bloginfo('url') ?>/<?php echo $month->year; ?>/"><?php echo $month->year; ?></a></li>
-	
 	<?php } ?>
 	<li><a href="<?php bloginfo('url') ?>/<?php echo $month->year; ?>/<?php echo date("m", mktime(0, 0, 0, $month->month, 1, $month->year)) ?>"><span class="archive-month"><?php echo date_i18n("F", mktime(0, 0, 0, $month->month, 1, $month->year)) ?></span></a></li>
 <?php $year_prev = $year_current;
