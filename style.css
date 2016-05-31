@@ -900,7 +900,7 @@ ul {
   color: white; }
 
 .main-navigation a {
-  padding: 0.1em 1em 0.5em;
+  padding: 0.3em 1em 0.3em;
   color: #48484a; }
 
 #container_header {
@@ -966,7 +966,7 @@ ul {
   margin-bottom: 0.5em; }
 
 .container-post-excerpt {
-  width: 50%;
+  width: 100%;
   float: left; }
   .container-post-excerpt:nth-child(1n) {
     padding-right: 10px; }
@@ -1068,8 +1068,8 @@ a.more-link {
   margin-bottom: 0.5em; }
 
 .main-navigation {
-  border-top: 2px solid #f6e9d2;
-  border-bottom: 2px solid #f6e9d2;
+  border-top: 2px solid #f3f0b9;
+  border-bottom: 2px solid #f3f0b9;
   padding-top: 0; }
 
 .nav-links {
@@ -1083,8 +1083,8 @@ a.more-link {
   line-height: 1.7em; }
 
 #primary-menu > li {
-  font-weight: 300;
-  color: #48484a !important;
+  font-weight: 400;
+  color: #48474c !important;
   transition-property: background-color;
   transition-duration: 0.15s;
   transition-timing-function: linear;
@@ -1094,10 +1094,11 @@ a.more-link {
   padding: 0.3em 30px; }
 
 #primary-menu > li > a:hover {
-  background-color: #f6e9d2; }
+  background-color: #f3f0b9;
+  font-weight: bold; }
 
 .current_page_item {
-  background-color: white !important; }
+  background-color: #f3f0b9 !important; }
 
 .page-title {
   color: white; }
@@ -1213,4 +1214,165 @@ entry-footer {
 
 .block--offwhite {
   background: #eee;
+}
+
+.offwhite-frontpage h1 {
+  color: #5a497f;
+  font-size: 1.2em;
+}
+
+.green-highlight {
+  color: #0b9c75;
+}
+
+.front-page__archive-list li {
+ list-style-type: none;
+}
+
+.front-page__archive-list li a {
+  color: #0b9c75;
+}
+
+.main-image-block {
+  width: 100%;
+  float: left;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 45vh;
+  position: relative;
+}
+.main-image-block:before{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 639px){
+  .main-image-block:nth-of-type(1):after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+  }
+}
+@media screen and (min-width: 640px){
+  .main-image-block {
+    width: 50%;
+  }
+  .main-image-block:nth-of-type(1):after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 2px;
+    background: #fff;
+    right: 0;
+    top: 0;
+  }
+}
+.main-image-block article{
+  background: transparent;
+
+}
+.main-image-block > div{
+  padding: 15px 24px;
+  position: relative;
+  height: 100%;
+  z-index: 1;
+}
+.main-image-block > div > h3{
+  margin-top: 15%;
+  margin-bottom: 5px;
+}
+.main-image-block article h4{
+  font-size: 1.6em;
+  margin: 0 0 0.3em;
+  max-width: 260px;
+}
+.main-image-block > div > p{
+  position: absolute;
+  bottom: 0px;
+}
+.main-image-block > div > p > a.read-more{
+  padding-top: 0.5em;
+  color: #E1C116;
+  font-size: 0.9em;
+  float: left;
+}
+.front-page__news{
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.front-page__news-list article{
+  width: calc(100% / 3);
+  float: left;
+}
+.front-page__news-item__news-image{
+  height: 250px;
+  position: relative;
+}
+.front-page__news-item__news-image:before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #0b9c75;
+}
+.background-center-cover{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.front-page__news-item__news-image .entry-title{
+  position: absolute;
+  bottom: 15px;
+  margin: 0;
+  left: 15px;
+  width: calc(100% - 30px);
+}
+.front-page__news-item .posted-on a{
+  color: #0b9c75;
+}
+.recent-activity{
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.front-page__archives,
+.front-page__categories,
+.front-page__comments{
+  width: calc(100% / 3);
+  float: left;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.front-page__archives h1,
+.front-page__categories h1,
+.front-page__comments h1{
+  margin-bottom: 1.5em;
+  font-size: 1.7em;
+}
+.front-page__archives span.green-highlight,
+.front-page__categories span.green-highlight{
+  margin-bottom: 0.5em;
+  display: inline-block;
+}
+.front-page__comments p{
+  margin: 0;
+}
+.front-page__comments ul{
+  list-style: none;
+  list-style: none;
+  padding-left: 0;
 }

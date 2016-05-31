@@ -13,7 +13,7 @@ $args = array(
   );
 $categories = get_categories( $args );
 foreach ( $categories as $category ) {
-    echo '<a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a><br />';
+    echo '<a href="' . get_category_link( $category->term_id ) . '"><span class="green-highlight">' . $category->name . '</span></a><br />';
 }
 ?>
 
