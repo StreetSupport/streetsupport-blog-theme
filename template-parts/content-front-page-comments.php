@@ -1,22 +1,27 @@
 
 <?php
 /**
- * Template part for displaying categories posts.
+ * Template part for displaying comments posts.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package ssnblog
+ *
  */
 
-      $number=3; // number of recent comments desired
-      $post_id = get_the_ID();
-      $comments = $wpdb->get_results("SELECT * FROM $wpdb->comments WHERE comment_post_ID=$post_id AND comment_approved = '1' ORDER BY comment_date_gmt DESC LIMIT $number");
-   ?>
+function recent_comments($no_comments = 3, $comment_len = 80) {
+	$comments_query = new WP_Comment_Query();
+	$comments = $comments_query->query( array( 'number' => $no_comments ) );
+	$comm = '';
+	if ( $comments ) : foreach ( $comments as $comment ) :
+		$comm .= '<li><a class="author" href="' . get_permalink( $comment->comment_post_ID ) . '#comment-' . $comment->comment_ID . '">';
+		$comm .= get_comment_author( $comment->comment_ID ) . ':</a> ';
+		$comm .= '<p>' . strip_tags( substr( apply_filters( 'get_comment_text', $comment->comment_content ), 0, $comment_len ) ) . '...</p></li>';
+	endforeach; else :
+		$comm .= 'No comments.';
+	endif;
+	echo $comm;	
+}
+?>
 
-   <ul id="recentcomments">
-      <?php if ($comments) :
-         echo '<h2>' . sizeof($comments) . ' Recent Comments</h2>';
-         foreach ( (array) $comments as $comment) :
-            echo  '<li class="recentcomments">' . sprintf(__('%1$s on %2$s'), get_comment_author_link(), '<a href="'. get_comment_link($comment->comment_ID) . '">' . get_the_title($comment->comment_post_ID) . '</a>') . '</li>';
-         endforeach;
-      endif;?>
+ <?php recent_comments(); ?>

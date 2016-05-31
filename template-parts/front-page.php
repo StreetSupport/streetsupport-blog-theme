@@ -58,8 +58,7 @@ Template Name: front-page
 		<div id="latest-comments" class="front-page__comments container-cat-titles">
 			<h1 class="h1">Recent Comments</h1>
 			<div class="front-page__comments-list">
-				<?php 
-					get_template_part( 'template-parts/content-front-page-comments', 'page' );
+				<?php get_template_part( 'template-parts/content-front-page-comments', 'page' );
 				 ?>
 			</div>
 		</div>
