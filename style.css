@@ -924,7 +924,8 @@ ul {
   padding: 30px 0;
   text-align: center; }
   .front-page__news .h1 {
-    text-align: left; }
+    text-align: left;
+    font-size: 1.2em; }
 
 .front-page__news-list:before, .front-page__news-list:after {
   display: table;
