@@ -1199,7 +1199,7 @@ entry-footer {
   margin-right: 5px; }
 
 .block__content {
-  width: 1000px;
+  width: 100%;
   margin: 0 auto; }
   .block__content:before, .block__content:after {
     display: table;
