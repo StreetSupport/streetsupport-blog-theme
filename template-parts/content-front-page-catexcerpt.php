@@ -23,8 +23,7 @@
 				);
 		?>
     <p class="small front-page__news-item__meta">
-      <span class="posted-on">Posted on: <?php echo the_time('d/m/y'); ?></span>
-      <a class="read-more" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">Read More</a>
+      <a class="read-more" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">All Stories</a>
     </p>
 	</header>
 </article>
