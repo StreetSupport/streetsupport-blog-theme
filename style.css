@@ -1014,7 +1014,8 @@ article {
   margin-top: 1.5em; }
 
 .entry-title > a {
-  color: #101011; }
+  color: #FFF;
+  font-size: 1.3em; }
 
 article > .entry-header {
   padding-left: 1em; }
