@@ -44,10 +44,8 @@ Template Name: front-page
 		<div id="latest-archives" class="front-page__archives container-cat-titles">
 			<h1 class="h1">Archives</h1>
 			<div class="front-page__archive-list">
-				<?php query_posts('category_name=news&showposts=3');
-				while ( have_posts() ) : the_post();
-					get_template_part( 'template-parts/content-front-page-archives', 'page' );
-				endwhile; ?>
+				<?php get_template_part( 'template-parts/content-front-page-archives', 'page' );
+				 ?>
 			</div>
 		</div>
 		<div id="latest-categories" class="front-page__categories container-cat-titles">
@@ -55,7 +53,7 @@ Template Name: front-page
 			<div class="front-page__category-list">
 				<?php query_posts('category_name=news&showposts=3');
 				while ( have_posts() ) : the_post();
-					get_template_part( 'template-parts/content-front-page-archives', 'page' );
+					get_template_part( 'template-parts/content-front-page-categories', 'page' );
 				endwhile; ?>
 			</div>
 		</div>
