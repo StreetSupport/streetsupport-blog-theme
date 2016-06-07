@@ -33,6 +33,31 @@
 
 
 </div><!-- #page -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<script>
+	$(window).ready(function(){
+		var footerAccord = function() {
+			if($(window).width() <= 640){
+				$('.recent-activity').find('h1').next().slideUp();
+			} else {
+				$('.recent-activity').find('h1').next().slideDown();
+			}
+		}
+		if($(window).width() <= 640){
+			$('.recent-activity h1').on('click', function(){
+				if(!$(this).hasClass('active')){
+					$(this).parents('.recent-activity').find('h1').removeClass('active').next().slideUp();
+					$(this).addClass('active').next().slideToggle();
+				} else {
+					$(this).removeClass('active').next().slideToggle();
+				}
+			});
+		}
+		footerAccord();
+		$(window).bind('resize', footerAccord);
+	});
+</script>
 
 <?php wp_footer(); ?>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
