@@ -32,13 +32,12 @@ REQ_DIRS[5]="template-parts"
 
 for dir in "${REQ_DIRS[@]}"
 do
-  echo $dir
   cp -r $dir _dist
 done
 
 echo "- uploading files"
 cd _dist 
 
-curl --ftp-create-dirs -T style.css -u $FTP_USER:$FTP_PASS $FTP_HOST/opt/bitnami/apps/wordpress/htdocs/wp-content/themes/ssnblog/$f
+curl --ftp-create-dirs -T ./style.css -u $FTP_USER:$FTP_PASS $FTP_HOST/opt/bitnami/apps/wordpress/htdocs/wp-content/themes/ssnblog/$f
 
 echo "*** Finished Deployment ***"
