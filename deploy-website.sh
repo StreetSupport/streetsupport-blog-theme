@@ -31,7 +31,7 @@ REQ_DIRS[5]="template-parts"
 
 for dir in $REQ_DIRS
 do
-  cp -vr /{$dir}/ _dist
+  cp -vr $dir _dist
 done
 
 echo "- _dist contents:"
