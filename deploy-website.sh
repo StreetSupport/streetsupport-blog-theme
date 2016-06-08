@@ -40,6 +40,6 @@ cd _dist
 ls
 
 echo "- uploading files"
-lftp !ls
+lftp ls
 
 echo "*** Finished Deployment ***"
