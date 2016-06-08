@@ -3,6 +3,10 @@ git:
 language: node_js
 node_js:
 - '4'
+addons:
+  apt:
+    packages:
+    - lftp
 cache:
   directories:
   - node_modules
