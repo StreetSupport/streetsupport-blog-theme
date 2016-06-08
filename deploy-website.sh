@@ -33,13 +33,18 @@ REQ_DIRS[5]="template-parts"
 for dir in "${REQ_DIRS[@]}"
 do
   echo $dir
-  cp -vr $dir _dist
+  cp -r $dir _dist
 done
 
-echo "- _dist contents:"
-cd _dist
-ls
+echo "- uploading files"
+cd _dist 
 
-cd ../
+ftp -n $FTP_HOST <<END_SCRIPT
+quote USER $FTP_USER
+quote PASS $FTP_PASS
+put style.css
+quit
+END_SCRIPT
+exit 0
 
 echo "*** Finished Deployment ***"
