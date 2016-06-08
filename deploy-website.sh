@@ -22,6 +22,7 @@ do
 done
 
 echo "- copying required directories"
+declare -A REQ_DIRS
 REQ_DIRS[0]="images"
 REQ_DIRS[1]="inc"
 REQ_DIRS[2]="js"
@@ -31,6 +32,7 @@ REQ_DIRS[5]="template-parts"
 
 for dir in $REQ_DIRS
 do
+  echo $dir
   cp -vr $dir _dist
 done
 
