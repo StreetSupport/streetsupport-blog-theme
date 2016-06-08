@@ -5,6 +5,18 @@ set -e
 
 echo "*** Beginning Deployment ***"
 
-gulp deploy
+# gulp deploy
+
+mkdir _dist
+
+for f in *.php
+do
+  cp $f _dist/{$f}
+done
+
+cd _dist
+ls
+
+cd ../
 
 echo "*** Finished Deployment ***"
