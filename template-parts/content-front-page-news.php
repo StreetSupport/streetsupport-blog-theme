@@ -21,7 +21,6 @@
 	    <p><?php echo get_post_meta(get_the_ID(), 'front-page-snippet', true); ?></p>
 	    <p class="small front-page__news-item__meta">
 	      <span class="posted-on">Posted by: <a href=""><?php the_author(); ?></a> on <a href=""><?php echo the_time('d/m/y'); ?></a></span>
-	 		<?php the_excerpt(); ?>
 	      <a class="read-more" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">Read More</a>
 	    </p>
 	</div>
