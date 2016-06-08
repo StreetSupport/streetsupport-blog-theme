@@ -35,8 +35,11 @@ do
   cp -r $dir _dist
 done
 
-echo "- uploading files"
+echo "- _dist contents"
 cd _dist 
+ls
+
+echo "- uploading files"
 
 curl --ftp-create-dirs -T "style.css" -u $FTP_USER:$FTP_PASS $FTP_HOST/opt/bitnami/apps/wordpress/htdocs/wp-content/themes/ssnblog/$f
 
