@@ -14,6 +14,11 @@ do
   cp $f _dist/{$f}
 done
 
+for f in *.css
+do
+  cp $f _dist/{$f}
+done
+
 cd _dist
 ls
 
