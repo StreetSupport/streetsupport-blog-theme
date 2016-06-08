@@ -73,7 +73,7 @@ Template Name: front-page
 				<?php endforeach; 
 				wp_reset_postdata(); ?>
 			</div>
-			<a href="<?php echo get_site_url (); ?>/category/news" class="btn btn--brand-e"><span class="btn__text">Load More</span></a>
+			<a href="<?php echo get_site_url (); ?>/category/news" class="btn btn--brand-e"><span class="btn__text">Read More News Stories</span></a>
 		</div>
 	</div>
 </div>
