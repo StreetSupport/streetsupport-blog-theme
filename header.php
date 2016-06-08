@@ -27,7 +27,19 @@
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
+<script>
+  WebFontConfig = {
+    custom: ['museo_sans_rounded300', 'museo_sans_rounded500']
+  }
 
+  var loadFonts = function (d) {
+    var wf = d.createElement('script')
+    var s = d.scripts[0]
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js'
+    s.parentNode.insertBefore(wf, s)
+  }
+  loadFonts(document)
+</script>
 <?php wp_head(); ?>
 </head>
 
