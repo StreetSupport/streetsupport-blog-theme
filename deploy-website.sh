@@ -30,7 +30,7 @@ REQ_DIRS[3]="languages"
 REQ_DIRS[4]="layouts"
 REQ_DIRS[5]="template-parts"
 
-for dir in $REQ_DIRS
+for dir in "${REQ_DIRS[@]}"
 do
   echo $dir
   cp -vr $dir _dist
