@@ -38,6 +38,6 @@ done
 echo "- uploading files"
 cd _dist 
 
-curl --ftp-create-dirs -T ./style.css -u $FTP_USER:$FTP_PASS $FTP_HOST/opt/bitnami/apps/wordpress/htdocs/wp-content/themes/ssnblog/$f
+curl --ftp-create-dirs -T "style.css" -u $FTP_USER:$FTP_PASS $FTP_HOST/opt/bitnami/apps/wordpress/htdocs/wp-content/themes/ssnblog/$f
 
 echo "*** Finished Deployment ***"
