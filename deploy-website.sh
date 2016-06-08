@@ -38,9 +38,10 @@ done
 echo "- _dist contents"
 cd _dist 
 ls
+cd ../
 
 echo "- uploading files"
 lftp -u $FTP_USER,$FTP_PASS $FTP_HOST \
- -e 'mirror -c -e -R source ~/opt/bitnami/apps/wordpress/htdocs/wp-content/themes/ssnblog ; exit'
+ -e 'mirror -c -e -R _dist ~/opt/bitnami/apps/wordpress/htdocs/wp-content/themes/ssnblog ; exit'
 
 echo "*** Finished Deployment ***"
