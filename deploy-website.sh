@@ -40,6 +40,7 @@ cd _dist
 ls
 
 echo "- uploading files"
-lftp -e 'put /style.css; bye' -u $FTP_USER,$FTP_PASS $FTP_HOST
+lftp -u $FTP_USER,$FTP_PASS $FTP_HOST \
+ -e 'mirror -c -e -R source ~/opt/bitnami/apps/wordpress/htdocs/wp-content/themes/ssnblog ; exit'
 
 echo "*** Finished Deployment ***"
