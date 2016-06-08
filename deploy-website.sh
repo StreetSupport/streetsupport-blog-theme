@@ -5,6 +5,6 @@ set -e
 
 echo "*** Beginning Deployment ***"
 
-
+gulp deploy
 
 echo "*** Finished Deployment ***"
