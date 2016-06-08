@@ -40,6 +40,6 @@ cd _dist
 ls
 
 echo "- uploading files"
-curl -u $FTP_USER:$FTP_PASS -T "{style.css}" $FTP_HOST
+curl -u $FTP_USER:$FTP_PASS -T "{_dist/style.css}" $FTP_HOST
 
 echo "*** Finished Deployment ***"
