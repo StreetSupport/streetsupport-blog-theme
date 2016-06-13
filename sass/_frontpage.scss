@@ -6,11 +6,7 @@
 		margin-left: auto;
 		margin-right: auto;
 		.h1 {
-			text-align: left;
-			font-size: 2em;
-		}
-		h1{
-			margin-top: 15px;
+			margin-top: 0px;
 			margin-bottom: 45px;
 			color: #5a497f;
 		}
@@ -254,6 +250,10 @@
 		}
 		&:last-of-type:after {
 			display: none;
+		}
+
+		&__heading a {
+			color: white;
 		}
 	}
 	article{

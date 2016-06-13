@@ -13,17 +13,10 @@
 	<header class="entry-header cat-excerpt-entry-header">
 		<?php
 			the_title(
-				'<h4 class="entry-title cat-excerpt-entry-title">
+				'<h1 class="h1 main-image-block__heading">
 					<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a>
-				</h4>'
+				</h1>'
 			);
-			// the_post_thumbnail( 'thumbnail');
-			// the_content(
-			// 	sprintf(
-			// 		/* translators: %s: Name of current post. */
-			// 		the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			// 	)
-			// );
 		?>
 
 	</header>

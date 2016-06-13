@@ -27,10 +27,6 @@ article {
 	margin-top: 1.5em;
 }
 
-.entry-title > a {
-	color: $brand-m;
-}
-
 article > .entry-header {
 	padding-left: 1em;
 }
@@ -57,4 +53,13 @@ img.wp-image-25.alignright {
 
 .size-thumbnail {
 	margin-top: 0.3em;
+}
+
+
+.post {
+	&__heading {
+		margin-top: 45px;
+		margin-bottom: 45px;
+		color: $brand-h;
+	}
 }
