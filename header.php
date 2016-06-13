@@ -53,10 +53,11 @@
         <span class="branding__text">Street Support Blog</span>
       </a>
       
-      <button class="nav-button btn btn--plain btn--brand-e site-header__nav-button">
+      <button class="nav-button btn btn--plain btn--brand-e site-header__nav-button js-nav-open">
         <span class="btn__text">Menu</span>
       </button>
       <nav id="site-navigation" class="main-navigation" role="navigation">
+        <button class="btn btn--plain nav__btn js-nav-close" type="button"><span class="hide-screen">Close</span></button>
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
       </nav>
     </header>
