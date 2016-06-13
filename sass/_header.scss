@@ -1,15 +1,45 @@
-#masthead {
-    background-color: $brand-a;
-}
-
 .site-header {
+    background-color: $brand-a;
     text-align: center !important;
     padding-top: 0.5em;
+
+    &__branding {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1.2rem;
+        font-weight: lighter !important;
+        color: white;
+        margin: 10px 1rem;
+
+        &:hover { color: white; }
+    }
+
+    &__nav-button {
+        font-size: 1.2em;
+        top: 0;
+        right: 0;
+        border-radius: 0;
+        position: absolute;
+        margin: 0;
+        & .btn__text {
+            padding-top: 22px;
+            padding-bottom: 22px;
+        }
+    }
 }
 
-.site-header > a {
-    padding: 2em 0;
-    display: block;
+.branding {
+    &__logo {
+        width: 38px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    &__text {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 2.4rem;
+    }
 }
 
 .main-navigation {
@@ -21,52 +51,19 @@
     text-align: center !important;
 }
 
-#logo {
-    width: 38px;
-    height: 38px;
-    left: 0.5em;
-    top: 0.25em;
-    margin-top: 0.4em;
-}
-
-.header__title {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 1.375rem;
-    font-weight: lighter !important;
-    color: white;
-}
 
 .main-navigation a {
     padding: 0.1em 1em 0.5em;
     color: $brand-k;
 }
 
-#container_header {
-    line-height: 2.1875rem;
-}
-
-.nav-button{
-    top: 0;
-    right: 0;
-    border-radius: 0;
-    position: absolute;
-    padding: 0.22em 2em;
-    margin: 0;
-}
-
 @media screen and (max-width: 690px){
-    .site-header{
+    .site-header {
         > a {
             padding: 0;
             float: left;
-            h1{
-                font-size: 1em;
-            }
         }
-    }
-    .nav-button{
-         padding: 0.22em 1em;
+        font-size: 1em;
     }
     .main-navigation ul li{
         display: block;

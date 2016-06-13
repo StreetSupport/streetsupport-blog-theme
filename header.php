@@ -47,20 +47,18 @@
   <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ssnblog' ); ?></a>
 
-    <div id="container_header">
-      <header id="masthead" class="site-header" role="banner">
-        <a href="<?php echo get_site_url (); ?>">
-          <img src="<?php echo get_site_url ();  ?>/wp-content/themes/ssnblog/images/site_icon.svg" id="logo" alt="street support logo">
-          <h1 class="h3 header__title">Street Support Blog</h1>
-        </a>
-        
-        <button class="nav-button btn btn-brand-j">
-          <span class="btn__text">Menu</span>
-        </button>
-        <nav id="site-navigation" class="main-navigation" role="navigation">
-          <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-        </nav>
-      </header>
-    </div>
+    <header class="site-header" role="banner">
+      <a class="site-header__branding" href="<?php echo get_site_url (); ?>">
+        <img src="<?php echo get_site_url ();  ?>/wp-content/themes/ssnblog/images/site_icon.svg" class="branding__logo" alt="street support logo">
+        <span class="branding__text">Street Support Blog</span>
+      </a>
+      
+      <button class="nav-button btn btn--plain btn--brand-e site-header__nav-button">
+        <span class="btn__text">Menu</span>
+      </button>
+      <nav id="site-navigation" class="main-navigation" role="navigation">
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+      </nav>
+    </header>
 
     <div id="content" class="site-content">
