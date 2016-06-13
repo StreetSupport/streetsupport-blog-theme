@@ -180,6 +180,9 @@
 	@include mq($from: l) {
 		width: calc(100% / 3 * 2);
 	}
+	@include mq($from: xl) {
+		margin-left: 60px;
+	}
 }
 
 .container-post-excerpt > h3 {
