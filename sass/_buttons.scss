@@ -62,6 +62,18 @@
   }
 
   // Variants
+  &--brand-b {
+    .btn__text {
+      background-color: $brand-b;
+      color: #fff;
+      box-shadow: 0px 3px 0px 0px darken( $brand-b, 15% );
+
+      &:hover {
+        background-color: darken( $brand-b, 5% );
+      }
+
+    }
+  }
   &--brand-d {
     .btn__text {
       background-color: $brand-d;
@@ -96,6 +108,25 @@
         background-color: darken( $brand-g, 5% );
       }
     }
+  }
+  &--brand-j {
+    .btn__text {
+      background-color: $brand-j;
+      color: $brand-k;
+      box-shadow: 0px 3px 0px 0px darken( $brand-j, 15% );
+
+      &:hover {
+        background-color: darken( $brand-j, 5% );
+      }
+      .btn__text{
+        color: $brand-k;
+        padding: 7.5px 3.5em;
+      }
+    }
+  }
+  &.nav-button{
+    background-color: $brand-j;
+    color: $brand-k;
   }
 
   &--plain {

@@ -45,3 +45,40 @@
 #container_header {
     line-height: 2.1875rem;
 }
+
+.nav-button{
+    top: 0;
+    right: 0;
+    border-radius: 0;
+    position: absolute;
+    padding: 0.22em 2em;
+    margin: 0;
+}
+
+@media screen and (max-width: 690px){
+    .site-header{
+        > a {
+            padding: 0;
+            float: left;
+            h1{
+                font-size: 1em;
+            }
+        }
+    }
+    .nav-button{
+         padding: 0.22em 1em;
+    }
+    .main-navigation ul li{
+        display: block;
+        width: 100%;
+        a{
+            display: block;
+            width: 100%;
+        }
+    }
+}
+@media screen and (min-width: 690px){
+    .nav-button{
+        display: none;
+    }
+}

@@ -2,11 +2,14 @@
 
   &__content {
     @include cf();
-    width: 1000px;
+    width: 100%;
     margin: 0 auto;
   }
 
-  &--highlight { 
+  &--highlight {
     background: $brand-i;
+  }
+  &--offwhite{
+  	background: #edeeee;
   }
 }
