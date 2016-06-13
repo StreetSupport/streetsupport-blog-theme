@@ -12,7 +12,6 @@
 <article id="post-<?php the_ID(); ?>" class="front-page__news-item" <?php post_class(); ?>>
 		<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
 		?>
-		<?php the_category(); ?>
 	<div class="front-page__news-item__news-image" style="background-image: url(<?php echo $src[0]; ?> ) !important;">
 		<?php
 			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
