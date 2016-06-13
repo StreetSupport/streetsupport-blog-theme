@@ -46,16 +46,10 @@ Template Name: front-page
 		<div id="latest-news-posts" class="front-page__news container-cat-titles">
 			<h1 class="h1">Latest News</h1>
 			<div class="front-page__news-list">
-				<?php
-					$args = array( 'posts_per_page' => 3 );
-					$lastposts = get_posts( $args );
-					foreach ( $lastposts as $post ) :
-  				setup_postdata( $post ); ?>
-				<?php
-				get_template_part( 'template-parts/content-front-page-news', 'page' );
-				?>
-				<?php endforeach;
-				wp_reset_postdata(); ?>
+				<?php query_posts('category_name=news&showposts=3');
+				while ( have_posts() ) : the_post();
+					get_template_part( 'template-parts/content-front-page-news', 'page' );
+				endwhile; ?>
 			</div>
 			<a href="<?php echo get_site_url (); ?>/category/news" class="btn btn--brand-e"><span class="btn__text">Read More News Stories</span></a>
 		</div>
