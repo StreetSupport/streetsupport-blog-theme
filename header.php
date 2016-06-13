@@ -50,7 +50,7 @@
     <header class="site-header" role="banner">
       <a class="site-header__branding" href="<?php echo get_site_url (); ?>">
         <img src="<?php echo get_site_url ();  ?>/wp-content/themes/ssnblog/images/site_icon.svg" class="branding__logo" alt="street support logo">
-        <span class="branding__text">Street Support Blog</span>
+        <span class="branding__text">Street Support</span>
       </a>
       
       <button class="nav-button btn btn--plain btn--brand-e site-header__nav-button">
