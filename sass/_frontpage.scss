@@ -171,10 +171,11 @@
 .container-post-excerpt {
 	float: left;
 	width: 100%;
-	&:nth-child(1n) { padding-right: 10px; }
-	&:nth-child(2n) { padding-left: 10px; }
+	
 	@include mq($from: l) {
 		width: calc(100% / 3 * 2);
+	&:nth-child(1n) { padding-right: 10px; }
+	&:nth-child(2n) { padding-left: 10px; }
 	}
 	@include mq($from: xl) {
 		margin-left: 60px;
@@ -206,14 +207,17 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 45vh;
+	height: 55vh;
 	position: relative;
-	@media screen and (max-width: 1024px){
-		height: 35vh;
+
+	@include mq($from: m) {
+		height: 45vh;
 	}
-	@media screen and (max-width: 767px){
-		height: 30vh;
+
+	@include mq($from: l) {
+		height: 40vh;
 	}
+
 	&:before{
 		position: absolute;
 		content: '';
@@ -251,11 +255,12 @@
 		&:last-of-type:after {
 			display: none;
 		}
-
-		&__heading a {
-			color: white;
-		}
 	}
+
+	&__heading a {
+		color: white;
+	}
+
 	article{
 		background: transparent;
 		h3{
