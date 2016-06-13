@@ -57,7 +57,7 @@ Template Name: front-page
 	</div>
 </div>
 
-<div class="block block--highlight">
+<div class="block block">
 	<div class="block__content">
 		<div id="latest-news-posts" class="front-page__news container-cat-titles">
 			<h1 class="h1">Recent Posts</h1>
@@ -67,13 +67,13 @@ Template Name: front-page
 					$lastposts = get_posts( $args );
 					foreach ( $lastposts as $post ) :
   				setup_postdata( $post ); ?>
-				<?php 
+				<?php
 				get_template_part( 'template-parts/content-front-page-news', 'page' );
 				?>
-				<?php endforeach; 
+				<?php endforeach;
 				wp_reset_postdata(); ?>
 			</div>
-			<a href="<?php echo get_site_url (); ?>/category/news" class="btn btn--brand-e"><span class="btn__text">Load More</span></a>
+			<a href="<?php echo get_site_url (); ?>/category/news" class="btn btn--brand-j"><span class="btn__text">Load More</span></a>
 		</div>
 	</div>
 </div>

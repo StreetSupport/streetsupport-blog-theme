@@ -6,7 +6,7 @@ Template Name: blog-page
 
 <?php get_header(); ?>
 
-<div class="block block--highlight">
+<div class="block block">
 	<div class="block__content">
 		<div id="latest-news-posts" class="front-page__news container-cat-titles">
 			<h1 class="h1">Recent Posts</h1>
@@ -21,15 +21,15 @@ Template Name: blog-page
   				 $posts[] += $post->ID;
 				}
 
-				$current = array_search( get_the_ID(), $posts );
-				$prevID = $posts[$current-1];
-				$nextID = $posts[$current+1];
-			
+			$current = array_search( get_the_ID(), $posts );
+			$prevID = $posts[$current-1];
+			$nextID = $posts[$current+1];
+
   				setup_postdata( $post ); ?>
-				<?php 
+				<?php
 				get_template_part( 'template-parts/content-blog-page-listings', 'page' );
 				?>
-				<?php endforeach; 
+				<?php endforeach;
 				wp_reset_postdata(); ?>
 			</div>
 			<div class="navigation">
@@ -41,7 +41,7 @@ Template Name: blog-page
 			<?php endif;
 			if ( !empty( $nextID ) ): ?>
 			<div class="alignright">
-			<a class="btn btn--brand-e" href="<?php echo get_permalink( $nextID ); ?>" 
+			<a class="btn btn--brand-e" href="<?php echo get_permalink( $nextID ); ?>"
 			 title="<?php echo get_the_title( $nextID ); ?>"><span class="btn__text">Next</span></a>
 			</div>
 			<?php endif; ?>

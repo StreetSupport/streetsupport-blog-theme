@@ -43,8 +43,13 @@
     <a href="<?php echo get_site_url ();  ?>">
       <img src="<?php echo get_site_url ();  ?>/wp-content/themes/ssnblog/images/site_icon.svg" id="logo" alt="street support logo">
         <h1 class="h3 header__title">Street Support Blog</h1></a>
+      <button class="nav-button btn btn-brand-j">
+      <span class="btn__text">
+          Menu
+      </span>
+      </button>
 
-  	<nav id="site-navigation" class="main-navigation" role="navigation">
+    <nav id="site-navigation" class="main-navigation" role="navigation">
   		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
   	</nav><!-- #site-navigation -->
   </header><!-- #masthead -->

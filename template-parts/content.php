@@ -9,7 +9,7 @@
 
 $postCount = 0;
 ?>
-<div class="block__content">
+<div class="block__content inner-content">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
 			<?php
