@@ -30,7 +30,7 @@ get_header(); ?>
 			while ( have_posts() ) : the_post();
 				if($postCount > 0) : ?>
 				<div id="post-divider">
-					<span class="divider"><span class="divider__line"></span>
+					<span class="divider"><span class="divider__line divider__contain-to-grid"></span>
 					<span class="divider__background">
 						<img src="<?php echo get_site_url ();  ?>/wp-content/themes/ssnblog/images/site_icon.svg" id="logo" alt="street support logo"></span></span>
 					</div>
@@ -41,7 +41,7 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_format() ); 
+				get_template_part( 'template-parts/content', get_post_format() );
 				$postCount++;
 
 			endwhile;

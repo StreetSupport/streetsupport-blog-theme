@@ -5,6 +5,9 @@
 .entry-meta {
     float: right !important;
     font-size: 0.75em;
+    .comments-link{
+    	display: none;
+    }
 }
 
 time.entry-date.published {

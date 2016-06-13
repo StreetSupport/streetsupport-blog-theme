@@ -957,8 +957,13 @@ ul {
   background-color: #5a497f;
   font-weight: 100;
   margin-top: auto;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em; }
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  margin-bottom: 0; }
+
+h4.page-title {
+  padding-left: 2em !important;
+  padding-right: 2em !important; }
 
 .page-title > a {
   color: #ffde00; }
@@ -1422,6 +1427,8 @@ img.wp-image-25.alignright {
 .entry-meta {
   float: right !important;
   font-size: 0.75em; }
+  .entry-meta .comments-link {
+    display: none; }
 
 time.entry-date.published {
   color: #0b9b75; }
@@ -1499,6 +1506,10 @@ a.more-link {
   .divider__icon {
     height: 40px;
     width: 37px; }
+  .divider__contain-to-grid {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto; }
 
 #colophon {
   background: linear-gradient(#29272a, #101011);
