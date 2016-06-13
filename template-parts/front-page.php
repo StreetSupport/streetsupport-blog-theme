@@ -57,31 +57,31 @@ Template Name: front-page
 </div>
 
 <div class="block block--offwhite">
-	<div class="block__content recent-activity">
-		<div id="latest-comments" class="front-page__comments container-cat-titles offwhite-frontpage">
-			<h1 class="h1">Tags</h1>
-			<div class="front-page__comments-list">
+	<div class="block__content recent-activity js-accordion">
+		<div id="latest-comments" class="front-page__comments container-cat-titles offwhite-frontpage accordion__item">
+			<h1 class="h1 js-header">Tags</h1>
+			<div class="front-page__comments-list js-item accordion__inner">
 				<?php get_template_part( 'template-parts/content-front-page-tags', 'page' );
 				 ?>
 			</div>
 		</div>
-		<div id="latest-archives" class="front-page__archives container-cat-titles offwhite-frontpage">
-			<h1 class="h1">Archives</h1>
-			<div class="front-page__archive-list">
+		<div id="latest-archives" class="front-page__archives container-cat-titles offwhite-frontpage accordion__item">
+			<h1 class="h1 js-header">Archives</h1>
+			<div class="front-page__archive-list js-item accordion__inner">
 				<?php get_template_part( 'template-parts/content-front-page-archives', 'page' );
 				 ?>
 			</div>
 		</div>
-		<div id="latest-categories" class="front-page__categories container-cat-titles offwhite-frontpage">
-			<h1 class="h1">Categories</h1>
-			<div class="front-page__category-list">
+		<div id="latest-categories" class="front-page__categories container-cat-titles offwhite-frontpage accordion__item">
+			<h1 class="h1 js-header">Categories</h1>
+			<div class="front-page__category-list js-item accordion__inner">
 				<?php get_template_part( 'template-parts/content-front-page-categories', 'page' );
 				?>
 			</div>
 		</div>
 	</div>
 </div>
-
+<script src="<?php echo get_site_url(); ?>/wp-content/themes/ssnblog/js/accordion.js"></script>
 <?php
 get_sidebar();
 get_footer();

@@ -321,6 +321,14 @@
 		background: none !important;
 	}
 @media screen and (max-width: 639px){
+
+	.accordion__item {
+	}
+  .accordion__inner {
+		display: none;
+		&.is-active { display: block; }
+	}
+
 	.recent-activity{
 		padding: 0;
 		background-color: #ea8503;
@@ -335,11 +343,12 @@
 		background-size: contain;
 		margin-top: 0.7em;
 		margin-bottom: 0.7em;
-
+		&.inactive { 
+			display: none;
+		}
 	}
 	.recent-activity div{
-		padding-left: 15px;
-		padding-right: 15px;
+		padding: 0 15px 5px 15px;
 	}
 	.recent-activity h1{
 		color: white;
