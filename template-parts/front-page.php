@@ -60,7 +60,7 @@ Template Name: front-page
 <div class="block block">
 	<div class="block__content">
 		<div id="latest-news-posts" class="front-page__news container-cat-titles">
-			<h1 class="h1">Recent Posts</h1>
+			<h1 class="h1">Latest News</h1>
 			<div class="front-page__news-list">
 				<?php
 					$args = array( 'posts_per_page' => 3 );
