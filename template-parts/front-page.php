@@ -64,6 +64,13 @@ Template Name: front-page
 
 <div class="block block--offwhite">
 	<div class="block__content recent-activity">
+		<div id="latest-comments" class="front-page__comments container-cat-titles offwhite-frontpage">
+			<h1 class="h1">Tags</h1>
+			<div class="front-page__comments-list">
+				<?php get_template_part( 'template-parts/content-front-page-tags', 'page' );
+				 ?>
+			</div>
+		</div>
 		<div id="latest-archives" class="front-page__archives container-cat-titles offwhite-frontpage">
 			<h1 class="h1">Archives</h1>
 			<div class="front-page__archive-list">
@@ -76,13 +83,6 @@ Template Name: front-page
 			<div class="front-page__category-list">
 				<?php get_template_part( 'template-parts/content-front-page-categories', 'page' );
 				?>
-			</div>
-		</div>
-		<div id="latest-comments" class="front-page__comments container-cat-titles offwhite-frontpage">
-			<h1 class="h1">Recent Comments</h1>
-			<div class="front-page__comments-list">
-				<?php get_template_part( 'template-parts/content-front-page-comments', 'page' );
-				 ?>
 			</div>
 		</div>
 	</div>
