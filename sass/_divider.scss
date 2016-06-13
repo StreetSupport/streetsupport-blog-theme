@@ -20,9 +20,14 @@
         background: white;
         display: inline-block;
     }
-    
+
     &__icon {
         height: 40px;
         width: 37px;
+    }
+    &__contain-to-grid{
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
