@@ -20,3 +20,7 @@ gulp.task('browserSync', function () {
 gulp.task('default', ['browserSync', 'sass'], function () {
   gulp.watch('sass/**/*.scss', ['sass'])
 })
+
+gulp.task('deploy', ['sass'], function () {
+  console.log('gulp task: deploy')
+})
