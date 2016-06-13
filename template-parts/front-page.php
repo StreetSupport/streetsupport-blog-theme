@@ -13,7 +13,7 @@ Template Name: front-page
 		endwhile;
 		?>
 	<div class="main-image-block" style="background-image: url(<?php echo $src[0]; ?> ) !important;">
-		<div id="latest-stories-posts" class="container-post-excerpt padding-added">
+		<div id="latest-stories-posts" class="container-post-excerpt">
 			<div class="text-wrap-div">
 				<h3><a class="read-more" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">Latest Story</a></h3>
 				<?php query_posts('category_name=stories&showposts=1');
@@ -29,7 +29,7 @@ Template Name: front-page
 		endwhile;
 		?>
 	<div class="main-image-block" style="background-image: url(<?php echo $src[0]; ?> ) !important;">
-		<div id="latest-about-homelessness-posts" class="container-post-excerpt padding-added">
+		<div id="latest-about-homelessness-posts" class="container-post-excerpt">
 			<div class="text-wrap-div">
 				<h3><a class="read-more" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">About Homelessness</a></h3>
 				<?php query_posts('category_name=about-homelessness&showposts=1');

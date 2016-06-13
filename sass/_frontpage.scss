@@ -173,10 +173,13 @@
 }
 
 .container-post-excerpt {
-	width: 60%;
 	float: left;
+	width: 100%;
 	&:nth-child(1n) { padding-right: 10px; }
 	&:nth-child(2n) { padding-left: 10px; }
+	@include mq($from: l) {
+		width: calc(100% / 3 * 2);
+	}
 }
 
 .container-post-excerpt > h3 {
@@ -258,7 +261,6 @@
 		h4{
 			font-size: 1.6em;
 			margin: 0 0 0.3em;
-			max-width: 260px;
 			a{
 				color: #fff;
 				line-height: 1.05;
