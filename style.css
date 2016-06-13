@@ -130,7 +130,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
-  font-family: 'museo-sans-rounded',sans-serif;
+  font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
@@ -618,9 +618,9 @@ a:hover {
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: inline-block; }
-
   .main-navigation ul {
     display: inline-block; } }
+
 .site-main .comment-navigation,
 .site-main .post-navigation,
 .site-main .posts-navigation {
@@ -863,10 +863,18 @@ object {
 .gallery-caption {
   display: block; }
 
+@font-face {
+  font-family: 'museo_sans_rounded500';
+  src: url("fonts/MuseoSansRounded-500-webfont.eot");
+  src: url("fonts/MuseoSansRounded-500-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/MuseoSansRounded-500-webfont.woff2") format("woff2"), url("fonts/MuseoSansRounded-500-webfont.woff") format("woff"), url("fonts/MuseoSansRounded-500-webfont.ttf") format("truetype"), url("fonts/MuseoSansRounded-500-webfont.svg#museo_sans_rounded500") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   font-size: 1rem;
   font-weight: 300;
-  margin: 0; }
+  margin: 0;
+  font-family: 'museo_sans_rounded500', sans-serif; }
 
 .entry-title {
   font-weight: 500; }
@@ -936,19 +944,19 @@ ul {
     float: left; }
     .site-header > a h1 {
       font-size: 1em; }
-
   .nav-button {
     padding: 0.22em 1em; }
-
   .main-navigation ul li {
     display: block;
     width: 100%; }
     .main-navigation ul li a {
       display: block;
       width: 100%; } }
+
 @media screen and (min-width: 690px) {
   .nav-button {
     display: none; } }
+
 .page-header {
   background-color: #5a497f;
   color: #ffde00; }
@@ -982,11 +990,14 @@ ul {
       max-width: 100%;
       padding-left: 0;
       padding-right: 0; } }
+
 .front-page__news-list:before, .front-page__news-list:after {
   display: table;
   content: ' '; }
+
 .front-page__news-list:after {
   clear: both; }
+
 .front-page__news-list article {
   width: 100%;
   float: left;
@@ -1018,6 +1029,7 @@ ul {
       display: inline; }
     .front-page__news-list article .news-spacing a {
       display: inline; }
+
 .front-page__news-item {
   background: none;
   box-sizing: border-box;
@@ -1068,19 +1080,25 @@ ul {
     .front-page__news-item .post-categories a {
       color: #0b9b75;
       font-weight: bold; }
+
 .front-page__news-item__meta:before, .front-page__news-item__meta:after {
   display: table;
   content: ' '; }
+
 .front-page__news-item__meta:after {
   clear: both; }
+
 .front-page__news-item__meta .posted-on {
   float: left; }
+
 .front-page__news-item__meta .read-more {
   float: right; }
+
 .front-page__archive-list {
   list-style-type: none; }
   .front-page__archive-list a {
     color: #0b9c75; }
+
 .front-page__archives, .front-page__categories, .front-page__comments {
   width: 100%;
   float: left;
@@ -1099,11 +1117,15 @@ ul {
       .front-page__archives h1, .front-page__categories h1, .front-page__comments h1 {
         margin-bottom: 1.5em;
         font-size: 1.7em; } }
-.front-page__archives span.green-highlight, .front-page__categories span.green-highlight {
+
+.front-page__archives span.green-highlight,
+.front-page__categories span.green-highlight {
   margin-bottom: 0.5em;
   display: inline-block; }
+
 .front-page__comments p {
   margin: 0; }
+
 .front-page__comments ul {
   list-style: none;
   list-style: none;
@@ -1202,7 +1224,7 @@ ul {
     z-index: 1; }
     .main-image-block > div > .text-wrap-div {
       position: absolute;
-      top: calc( 50% - 1em ); }
+      top: calc( 50% - 1em); }
       .main-image-block > div > .text-wrap-div h3 {
         margin-top: 0; }
     .main-image-block > div div > > p {
@@ -1244,10 +1266,8 @@ ul {
   .recent-activity {
     padding: 0;
     background-color: #ea8503; }
-
   .container-cat-titles {
     border-bottom: 2px solid #fff; }
-
   .container-cat-titles h1 {
     background-image: url("images/cross.png");
     background-repeat: no-repeat;
@@ -1255,30 +1275,25 @@ ul {
     background-size: contain;
     margin-top: 0.7em;
     margin-bottom: 0.7em; }
-
   .recent-activity div {
     padding-left: 15px;
     padding-right: 15px; }
-
   .recent-activity h1 {
     color: white;
     cursor: pointer; }
-
   .container-cat-titles li a span {
     color: white; }
-
   .container-cat-titles li p {
     margin-bottom: 15px;
     margin-top: 5px;
     color: #555; }
-
   .container-cat-titles a span {
     color: white; } }
+
 @media screen and (min-width: 640px) and (max-width: 960px) {
   .front-page__news {
     padding-left: 15px;
     padding-right: 15px; }
-
   .front-page__news-list article.front-page__news-item {
     position: relative; }
     .front-page__news-list article.front-page__news-item ul.post-categories {
@@ -1299,30 +1314,23 @@ ul {
       display: none; }
     .front-page__news-list article.front-page__news-item .news-spacing p.front-page__news-item__meta {
       display: block; }
-
   .front-page__news-item:nth-child(3n+1) {
     width: 100%;
     padding: 0; }
-
   .front-page__news-item:nth-child(3n+2) {
     width: 100%;
     padding: 0; }
-
   .front-page__news-item:nth-child(3n+3) {
     width: 100%;
     padding: 0; }
-
   .front-page__news-item .front-page__news-item__snippet {
     display: none; }
-
   .front-page__news-item__news-image:before {
     display: none; }
-
   .front-page__news-item h4 {
     position: relative;
     padding-bottom: 10px;
     margin-bottom: 0; }
-
   .front-page__news-item h4:after {
     position: absolute;
     content: '';
@@ -1331,12 +1339,10 @@ ul {
     height: 3px;
     width: 100%;
     background-color: #0b9b75; }
-
   .front-page__news-item__news-image {
     position: static;
     width: 20%;
     height: 150px; }
-
   .front-page__news-item__news-image h3.entry-title {
     position: absolute;
     left: 20%;
@@ -1344,10 +1350,8 @@ ul {
     padding-right: 15px;
     padding-left: 15px;
     top: 20%; }
-
   .front-page__news-item__news-image h3.entry-title a {
     color: #5a497f; }
-
   .front-page__news-item .front-page__news-item__meta {
     position: absolute;
     left: 20%;
@@ -1355,6 +1359,7 @@ ul {
     padding-right: 15px;
     padding-left: 15px;
     top: 30%; } }
+
 .inner-content,
 .navigation.post-navigation {
   max-width: 1000px;
@@ -1583,9 +1588,9 @@ entry-footer {
     content: ' '; }
   .block__content:after {
     clear: both; }
+
 .block--highlight {
   background: #f6e9d2; }
+
 .block--offwhite {
   background: #edeeee; }
-
-/*# sourceMappingURL=style.css.map */
