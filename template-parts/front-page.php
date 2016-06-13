@@ -23,22 +23,6 @@ Template Name: front-page
 			</div>
 		</div>
 	</div>
-	<?php query_posts('category_name=news&showposts=1');
-			while ( have_posts() ) : the_post();
-		$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
-		endwhile;
-		?>
-	<div class="main-image-block" style="background-image: url(<?php echo $src[0]; ?> ) !important;">
-		<div id="latest-about-homelessness-posts" class="container-post-excerpt padding-added">
-			<div class="text-wrap-div">
-				<h3><a class="read-more" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">Recent News</a></h3>
-				<?php query_posts('category_name=news&showposts=1');
-				while ( have_posts() ) : the_post();
-					get_template_part( 'template-parts/content-front-page-catexcerpt', 'page' );
-				endwhile; ?>
-			</div>
-		</div>
-	</div>
 	<?php query_posts('category_name=about-homelessness&showposts=1');
 			while ( have_posts() ) : the_post();
 		$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
