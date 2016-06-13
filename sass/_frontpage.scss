@@ -171,14 +171,12 @@
 .container-post-excerpt {
 	float: left;
 	width: 100%;
-	
-	@include mq($from: l) {
-		width: calc(100% / 3 * 2);
-	&:nth-child(1n) { padding-right: 10px; }
-	&:nth-child(2n) { padding-left: 10px; }
-	}
+
 	@include mq($from: xl) {
 		margin-left: 60px;
+		width: calc(100% / 3 * 2);
+		&:nth-child(1n) { padding-right: 10px; }
+		&:nth-child(2n) { padding-left: 10px; }
 	}
 }
 
@@ -207,12 +205,8 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 55vh;
+	height: 50vh;
 	position: relative;
-
-	@include mq($from: m) {
-		height: 45vh;
-	}
 
 	@include mq($from: l) {
 		height: 40vh;
@@ -227,7 +221,7 @@
 		top: 0;
 		left: 0;
 	}
-	@media screen and (max-width: 639px){
+	@include mq($until: l) {
 		&:after {
 			position: absolute;
 			content: '';
@@ -241,7 +235,7 @@
 			display: none;
 		}
 	}
-	@media screen and (min-width: 640px){
+	@include mq($from: l) {
 		width: calc(100% / 2);
 		&:after {
 			position: absolute;
