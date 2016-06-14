@@ -76,6 +76,8 @@ function ssnblog_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	add_image_size ('front-page-news', 650, 250, true);
 }
 endif;
 add_action( 'after_setup_theme', 'ssnblog_setup' );
