@@ -7,6 +7,18 @@
     color: $brand-b;
 }
 
+.nav-previous > a {
+  &:before {
+    content: ' < ';
+  }
+}
+
+.nav-next > a {
+  &:after {
+    content: ' > ';
+  }
+}
+
 .page-title {
     color: white;
 }
