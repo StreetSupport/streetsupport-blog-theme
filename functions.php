@@ -154,7 +154,7 @@ require get_template_directory() . '/inc/jetpack.php';
 
 add_filter( 'get_the_archive_title', function ($title) {
 
-		$title = '<a href="' . get_site_url() . '">Home</a> &gt; ';
+		$title = '<a href="https://streetsupport.net/">Home</a> &gt; <a href="' . get_site_url() . '">News</a> &gt; ';
 
     if ( is_category() ) {
 
