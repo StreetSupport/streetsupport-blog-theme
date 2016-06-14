@@ -8,7 +8,22 @@
  */
 
 $postCount = 0;
+
+
+if ( is_single() ) {
+  $category = get_the_category();
 ?>
+<header class="page-header">
+	<div class="block__content">
+			<h4 class="page-title">
+				<a href="https://streetsupport.net">Home</a> &gt; 
+				<a href="<?php echo get_site_url(); ?>">News</a> &gt;
+				<a href="<?php echo get_site_url(); ?>/category/<?php echo $category[0]->slug; ?>"><?php echo $category[0]->name; ?></a> &gt;
+				<?php echo single_post_title(); ?>
+			</h4>
+	</div>
+</header>
+<?php } ?>
 <div class="block__content inner-content">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
