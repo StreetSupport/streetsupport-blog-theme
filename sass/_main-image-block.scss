@@ -53,6 +53,7 @@
 
   &__heading a {
     color: white;
+    @extend .textShadow;
   }
 
   &__more-link {
