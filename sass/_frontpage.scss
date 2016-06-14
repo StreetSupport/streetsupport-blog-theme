@@ -164,6 +164,7 @@
 	&.front-page__news{
 		> h1{
 			background: none !important;
+			padding-left: 15px;
 		}
 	}
 }
@@ -276,6 +277,7 @@
 		z-index: 1;
 		> .text-wrap-div{
 			position: absolute;
+			padding-right: 24px;
 			top: calc( 50% - 1em );
 			h3{
 				margin-top: 0;
@@ -317,8 +319,6 @@
 	background-color: #edeeee;
 	@media screen and (min-width: 640px){
 		max-width: 100%;
-		padding-left: 0;
-		padding-right: 0;
 	}
 }
 .front-page__news .container-cat-titles{
