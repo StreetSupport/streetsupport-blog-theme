@@ -1,3 +1,9 @@
+body.is-active {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
 .main-navigation {
   position: fixed;
   top: 0;
@@ -41,7 +47,10 @@
 
 .nav {
   &__container { 
-    overflow: hidden;
+    overflow-y: scroll;
+    @include mq($from: m) {
+      overflow-y: hidden!important;
+    }
   }
 
   &__push {
@@ -156,11 +165,14 @@
 
 .menu-item {
   color: #fff;
-  border-bottom: 1px solid $brand-b;
   margin: 0;
   padding: 0;
   margin-top: 25px;
   font-weight: $font-headline-weight;
+
+  .sub-menu & {
+    border-bottom: 1px solid $brand-b;
+  }
 
   @include mq($from: m) {
     margin: 0 -4px 0 0; // inline-block whitespace fix
