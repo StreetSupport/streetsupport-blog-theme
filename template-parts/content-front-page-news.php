@@ -19,7 +19,7 @@
 		?>
 	</div>
 	<div class="news-spacing">
-	    <p><?php echo get_post_meta(get_the_ID(), 'front-page-snippet', true); ?></p>
+	    <p class="front-page__news-item__snippet"><?php echo get_post_meta(get_the_ID(), 'front-page-snippet', true); ?></p>
 	    <p class="small front-page__news-item__meta">
 	      <span class="posted-on">Posted on <?php echo the_time('d/m/y'); ?></span>
 	    </p>

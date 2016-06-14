@@ -17,7 +17,7 @@
 	&__news-heading {
 		margin-top: 0px;
 		margin-bottom: 24px;
-		color: #5a497f;
+		color: $brand-h;
 		
 		@include mq($from: m) {
 			margin-bottom: 45px;
@@ -83,8 +83,13 @@
 
 	}
 
+	&__news-item__snippet {
+		color: $brand-h;
+	}
+
 	&__news-item__meta {
 		@include cf();
+		color: $brand-h;
 		.posted-on { float: left; }
 		.read-more { float: right; }
 	}
@@ -229,10 +234,7 @@
 			}
 		}
 		.news-spacing{
-			p, > a{
-				display: none;
-			}
-			p.front-page__news-item__meta{
+			.front-page__news-item__meta{
 				display: block;
 			}
 		}
@@ -281,7 +283,7 @@
 		padding-right: 15px;
 		padding-left: 15px;
 		top: 0%;
-		color: #5a497f;
+		color: $brand-h;
 	}
 	.front-page__news-item .front-page__news-item__meta{
 		position: absolute;
