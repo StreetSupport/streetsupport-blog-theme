@@ -154,10 +154,10 @@ require get_template_directory() . '/inc/jetpack.php';
 
 add_filter( 'get_the_archive_title', function ($leaf) {
 
-		$title = '<a href="https://streetsupport.net/">Home</a> &gt; ';
+		$title = '<a href="https://streetsupport.net/">Home</a> &gt;&nbsp;';
 
 		if ( strlen($leaf) > 0) {
-			$title .= '<a href="' . get_site_url() . '">News</a> &gt; ';
+			$title .= '<a href="' . get_site_url() . '">News</a> &gt;&nbsp;';
 		} else {
 			$title .= 'News';
 		}
