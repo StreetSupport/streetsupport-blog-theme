@@ -146,53 +146,48 @@
 	background: none !important;
 }
 
-// todo: make this default
-@include mq($until: m) {
-	.accordion__item {
-	}
-  .accordion__inner {
+.accordion__inner {
+	display: none;
+	&.is-active { display: block; }
+}
+
+.recent-activity{
+	padding: 0;
+	background-color: #ea8503;
+}
+.container-cat-titles{
+	border-bottom: 2px solid #fff;
+}
+.container-cat-titles h1{
+	background-image: url('images/cross.png');
+	background-repeat: no-repeat;
+	background-position: center right 0px;
+	background-size: contain;
+	margin-top: 0.7em;
+	margin-bottom: 0.7em;
+	&.inactive { 
 		display: none;
-		&.is-active { display: block; }
 	}
+}
+.recent-activity div{
+	padding: 0 15px 5px 15px;
+}
+.recent-activity h1{
+	color: white;
+	cursor: pointer;
+}
+.container-cat-titles li a,
+.container-cat-titles li a span{
+	color: white;
+}
+.container-cat-titles li p{
+	margin-bottom: 15px;
+	margin-top: 5px;
+	color: #555;
+}
+.container-cat-titles a span{
+	color: white;
 
-	.recent-activity{
-		padding: 0;
-		background-color: #ea8503;
-	}
-	.container-cat-titles{
-		border-bottom: 2px solid #fff;
-	}
-	.container-cat-titles h1{
-		background-image: url('images/cross.png');
-		background-repeat: no-repeat;
-		background-position: center right 0px;
-		background-size: contain;
-		margin-top: 0.7em;
-		margin-bottom: 0.7em;
-		&.inactive { 
-			display: none;
-		}
-	}
-	.recent-activity div{
-		padding: 0 15px 5px 15px;
-	}
-	.recent-activity h1{
-		color: white;
-		cursor: pointer;
-	}
-	.container-cat-titles li a,
-	.container-cat-titles li a span{
-		color: white;
-	}
-	.container-cat-titles li p{
-		margin-bottom: 15px;
-		margin-top: 5px;
-		color: #555;
-	}
-	.container-cat-titles a span{
-		color: white;
-
-	}
 }
 
 @include mq($from: m, $until: l) {
