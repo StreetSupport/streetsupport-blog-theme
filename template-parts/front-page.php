@@ -28,6 +28,7 @@ Template Name: front-page
 				get_template_part( 'template-parts/content-front-page-catexcerpt', 'page' );
 				endwhile; ?>
 			</div>
+			<a class="main-image-block__more-link" href="<?php echo get_site_url(); ?>/category/stories">More Stories</a>
 		</div>
 	</div>
 	<?php query_posts('category_name=articles&showposts=1');
@@ -44,6 +45,7 @@ Template Name: front-page
 					get_template_part( 'template-parts/content-front-page-catexcerpt', 'page' );
 				endwhile; ?>
 			</div>
+			<a class="main-image-block__more-link" href="<?php echo get_site_url(); ?>/category/articles">More Articles</a>
 		</div>
 	</div>
 </div>

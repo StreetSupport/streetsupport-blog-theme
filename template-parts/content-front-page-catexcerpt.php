@@ -6,7 +6,6 @@
  *
  * @package ssnblog
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -18,6 +17,5 @@
 				</h1>'
 			);
 		?>
-
 	</header>
 </article>

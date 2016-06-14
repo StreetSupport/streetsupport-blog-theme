@@ -256,8 +256,15 @@
 		color: white;
 	}
 
+	&__more-link {
+		color: $brand-j;
+    position: absolute;
+    bottom: 25px;
+	}
+
 	article{
 		background: transparent;
+		position: relative;
 		h3{
 			font-size: 1.4em;
 		}
