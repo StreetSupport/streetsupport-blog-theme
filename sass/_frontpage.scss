@@ -157,7 +157,7 @@
 	background: none !important;
 }
 
-
+// todo: make this default
 @include mq($until: s) {
 	.accordion__item {
 	}
@@ -236,6 +236,7 @@
 		.news-spacing{
 			.front-page__news-item__meta{
 				display: block;
+				color: $brand-h;
 			}
 		}
 	}

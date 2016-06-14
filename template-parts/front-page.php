@@ -52,7 +52,7 @@ Template Name: front-page
 
 <div class="block block">
 	<div class="block__content">
-		<div id="latest-news-posts" class="front-page__news container-cat-titles">
+		<div id="latest-news-posts" class="front-page__news">
 			<h1 class="h1 front-page__news-heading">Latest News</h1>
 			<div class="front-page__news-list">
 				<?php query_posts('category_name=latest-news&showposts=3');
