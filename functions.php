@@ -157,18 +157,24 @@ add_filter( 'get_the_archive_title', function ($leaf) {
 		$title = '<a href="https://streetsupport.net/">Home</a> &gt;&nbsp;';
 
 		if ( strlen($leaf) > 0) {
-			$title .= '<a href="' . get_site_url() . '">News</a> &gt;&nbsp;';
+			$title .= '<a href="' . get_site_url() . '">News</a> &gt;';
 		} else {
 			$title .= 'News';
 		}
 
+    if ( is_archive() ) {
+			
+				$title .= single_month_title( ' ', false );
+
+    }
+
     if ( is_category() ) {
 			
-				$title .= single_cat_title( '', false );
+				$title .= single_cat_title( ' ', false );
 
     } elseif ( is_tag() ) {
 
-        $title .= single_tag_title( '', false );
+        $title .= ucwords(single_tag_title( ' ', false ));
 
     } elseif ( is_author() ) {
 
