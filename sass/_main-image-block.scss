@@ -1,0 +1,113 @@
+
+.main-image-block {
+  width: 100%;
+  float: left;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  position: relative;
+
+  @include mq($from: l) {
+    height: 40vh;
+  }
+
+  &:before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+  }
+  @include mq($until: l) {
+    &:after {
+      position: absolute;
+      content: '';
+      height: 2px;
+      width: 100%;
+      background: #fff;
+      bottom: 0;
+      left: 0;
+    }
+    &:last-of-type:after {
+      display: none;
+    }
+  }
+  @include mq($from: l) {
+    width: calc(100% / 2);
+    &:after {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 2px;
+      background: #fff;
+      right: 0;
+      top: 0;
+    }
+    &:last-of-type:after {
+      display: none;
+    }
+  }
+
+  &__heading a {
+    color: white;
+  }
+
+  &__more-link {
+    color: $brand-j;
+    position: absolute;
+    bottom: 25px;
+  }
+
+  article{
+    background: transparent;
+    position: relative;
+    h3{
+      font-size: 1.4em;
+    }
+    h4{
+      font-size: 1.6em;
+      margin: 0 0 0.3em;
+      a{
+        color: #fff;
+        line-height: 1.05;
+      }
+    }
+  }
+  > div{
+    padding: 15px 24px;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    > .text-wrap-div{
+      position: absolute;
+      padding-right: 24px;
+      top: calc( 35% - 1em );
+      h3{
+        margin-top: 0;
+      }
+    }
+    div >{
+      > p{
+        position: absolute;
+        bottom: 0px;
+        > a.read-more{
+          padding-top: 0.5em;
+          color: $brand-j;
+          font-size: 0.9em;
+          float: left;
+        }
+      }
+      h3{
+        margin-bottom: 5px;
+        position: relative;
+        > a{
+          color: $brand-j;
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}
