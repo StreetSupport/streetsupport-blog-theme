@@ -2,6 +2,15 @@
     font-size: 0.8em;
 }
 
+.nav-next,
+.nav-previous {
+    width: 45%;
+    line-height: 1.2em;
+
+    @include mq($from: m) {
+      width: 35%;
+    }
+}
 .nav-next > a,
 .nav-previous > a {
     color: $brand-b;
