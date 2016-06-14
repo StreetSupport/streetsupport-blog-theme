@@ -9,7 +9,9 @@
 }
 
 .site-content {
-	margin-top: 82px;
+	@include mq($from: m) {
+		margin-top: 82px;
+	}
 }
 
 .site-content, 

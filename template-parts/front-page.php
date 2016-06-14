@@ -6,7 +6,13 @@ Template Name: front-page
 
 <?php get_header(); ?>
 
-
+<header class="page-header">
+	<div class="block__content">
+			<h4 class="page-title">
+				<a href="https://streetsupport.net">Home</a> &gt; News
+			</h4>
+	</div>
+</header>
 <div class="block__content">
 		<?php query_posts('category_name=stories&showposts=1');
 			while ( have_posts() ) : the_post();
