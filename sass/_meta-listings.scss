@@ -20,7 +20,7 @@
     a{
       color: $brand-b;
     }
-    @media screen and (min-width: 640px){
+    @include mq($from: m) {
       width: calc(100% / 3);
       float: left;
       padding-top: 2em;
