@@ -116,7 +116,7 @@ add_action( 'widgets_init', 'ssnblog_widgets_init' );
 function ssnblog_scripts() {
 	wp_enqueue_style( 'ssnblog-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'ssnblog-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'ssnblog-navigation', get_template_directory_uri() . '/js/nav.js', array(), '20160614', true );
 
 // Hides the default primary menu when screen size is adjusted.
 //	wp_enqueue_script( 'ssnblog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -154,21 +154,27 @@ require get_template_directory() . '/inc/jetpack.php';
 
 add_filter( 'get_the_archive_title', function ($title) {
 
-		$title = '<a href="https://streetsupport.net/">Home</a> &gt; <a href="' . get_site_url() . '">News</a> &gt; ';
+		$title = '<a href="https://streetsupport.net/">Home</a> &gt;';
+
+		if ( strlen($title) > 0) {
+			$title .= '<a href="' . get_site_url() . '">News</a> &gt; ';
+		} else {
+			$title .= 'News';
+		}
 
     if ( is_category() ) {
+			
+				$title .= single_cat_title( '', false );
 
-            $title .= single_cat_title( '', false );
+    } elseif ( is_tag() ) {
 
-        } elseif ( is_tag() ) {
+        $title .= single_tag_title( '', false );
 
-            $title .= single_tag_title( '', false );
+    } elseif ( is_author() ) {
 
-        } elseif ( is_author() ) {
+        $title .= '<span class="vcard">' . get_the_author() . '</span>' ;
 
-            $title .= '<span class="vcard">' . get_the_author() . '</span>' ;
-
-        }
+    }
 
     return $title;
 
