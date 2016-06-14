@@ -95,6 +95,7 @@ body.is-active {
     padding: 20px;
     margin: 0;
     color: #fff;
+    background: url('/wp-content/themes/ssnblog/images/nav-close.png') no-repeat center center;
 
     @include mq($from: m) {
       display: none;
