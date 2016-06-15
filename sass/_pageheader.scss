@@ -10,6 +10,10 @@
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     line-height: 1.2em;
+
+    @include mq($from: m) {
+      width: 960px;
+    }
 }
 
 .page-title > a {
