@@ -23,7 +23,9 @@ get_header(); ?>
 			</div>
 		</header><!-- .page-header -->
 		<div class="block__content">
-
+            <div class="block__content inner-content">
+                <h1 class="h1 archive__heading"><?php echo get_the_archive_categoryOrTagName(); ?></h1>
+            </div>
 			<?php
 			/* Start the Loop */
 			$postCount = 0;
@@ -41,7 +43,7 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_format() ); 
+				get_template_part( 'template-parts/content-archive-listing', get_post_format() ); 
 				$postCount++;
 
 			endwhile;

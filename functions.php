@@ -78,6 +78,8 @@ function ssnblog_setup() {
 	) ) );
 
 	add_image_size ('front-page-news', 650, 250, true);
+	add_image_size ('archive-listing', 1024, 640, true);
+    
 }
 endif;
 add_action( 'after_setup_theme', 'ssnblog_setup' );
@@ -153,6 +155,26 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+function get_the_archive_categoryOrTagName() {
+    if ( is_archive() ) {
+        echo single_month_title( ' ', false );
+    }
+
+    if ( is_category() ) {
+        echo single_cat_title( ' ', false );
+    } 
+
+    if ( is_tag() ) {
+        echo ucwords(single_tag_title( ' ', false ));
+    }
+
+    if ( is_author() ) {
+        echo '<span class="vcard">' . get_the_author() . '</span>' ;
+    }
+}
+
+add_action('get_the_archive_categoryOrTagName', 'ssnblog_setup');
 
 add_filter( 'get_the_archive_title', function ($leaf) {
 

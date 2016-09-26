@@ -1,0 +1,17 @@
+.archive__heading {
+    color: $brand-h;
+    padding-left: 0.5em;
+    margin-top: 45px;
+}
+
+.archive__image-link {
+    text-align: center;
+    display: block;
+}
+
+.archive__image {
+    width: 100%;
+    @include mq($from: m) {
+        width: 66%;
+    }
+}
