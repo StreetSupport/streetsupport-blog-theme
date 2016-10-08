@@ -60,3 +60,12 @@ $header-subnav-height: 83px;
 $header-subnav-margin: 83px;
 
 $nav-width: 220px;
+
+// z-indices
+$zIndex-modal: 200;
+$zIndex-loadingSpinner: 180; // see browser.js
+$zIndex-mobileNav: 160;
+$zIndex-navOverlay: 140;
+$zIndex-fixedHeader: 120;
+$zIndex-SubNav: 100;
+$zIndex-breadcrumb: 80;

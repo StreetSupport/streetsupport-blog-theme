@@ -13,7 +13,7 @@ gulp.task('sass', function () {
 
 gulp.task('browserSync', function () {
   browserSync.init({
-    proxy: 'localhost:8080/wordpress'
+    proxy: 'ssn:8080'
   })
 })
 

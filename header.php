@@ -44,23 +44,72 @@
 </head>
 
 <body class="page-home" style="touch-action: manipulation;" <?php body_class(); ?>>
-  <nav class="main-navigation nav__container js-nav-container" role="navigation">
-    <button class="btn btn--plain nav__btn js-nav-close" type="button"><span class="hide-screen">Close</span></button>
-    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-  </nav>
+    <div class="sticky">
+        <header class="header header--desktop">
+            <div class="container">
+                <a class="site-header__branding" href="<?php echo get_site_url (); ?>">
+                    <img src="<?php echo get_site_url ();  ?>/wp-content/themes/ssnblog/images/site_icon.svg" class="branding__logo" alt="street support logo">
+                    <span class="branding__text">Street Support</span>
+                </a>
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                    <li class="nav__item nav__item--about"><a href="/about/">About</a></li>
+                    <li class="nav__item nav__item--news nav__item--active"><a href="/">News</a></li>
+                    <li class="nav__item nav__item--contact"><a href="/contact/">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <nav class="city-nav">
+            <ul class="nav__list nav__list">
+                <li class="nav__item nav__item--findhelp"><a href="https://streetsupport.net/find-help/">Find Help</a></li>
+                <li class="nav__item nav__item--givehelp"><a href="https://streetsupport.net/give-help/">Give Help</a></li>
+                <li class="nav__item nav__item--charter"><a href="https://charter.streetsupport.net">Charter</a></li>
+                <li class="nav__item nav__item--bigchange"><a href="https://streetsupport.net/manchester/bigchangemcr/">Big Change</a></li>
+                <li class="nav__item nav__item--news">
+                    <ul class="nav__list nav__list--sub-list">
+                        <li class="nav__item nav__item--sub-item nav__item--stories"><a href="/category/stories/">Stories</a></li>
+                        <li class="nav__item nav__item--sub-item nav__item--articles"><a href="/category/articles/">Articles</a></li>
+                        <li class="nav__item nav__item--sub-item nav__item--latestnews"><a href="/category/latest-news/">News</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
-  <div id="page" class="site nav__push js-nav-push">
+    <nav class="nav__container js-nav-container nav--mobile">
+        <button class="btn btn--plain nav__btn js-nav-close" type="button"><span class="hide-screen">Close</span></button>
+        <ul class="nav__list">
+            <li class="nav__item"><a href="/">Home</a></li>
+            <li class="nav__item nav__item--findhelp"><a href="/find-help/">Find Help</a></li>
+            <li class="nav__item nav__item--givehelp"><a href="/give-help/">Give Help</a></li>
+            <li class="nav__item nav__item--charter"><a href="/">Charter</a></li>
+            <li class="nav__item nav__item--bigchange"><a href="/manchester/bigchangemcr/">Big Change</a></li>
+            <li class="nav__item nav__item--about"><a href="/about/">About</a></li>
+            <li class="nav__item nav__item--news nav__item--city-specific is-active">
+                <a href="/">News</a>
+                <ul class="nav__list nav__list--sub-list">
+                    <li class="nav__item nav__item--stories"><a href="/category/stories/">Stories</a></li>
+                    <li class="nav__item nav__item--articles"><a href="/category/articles/">Articles</a></li>
+                    <li class="nav__item nav__item--news"><a href="/category/news/">News</a></li>
+                </ul>
+            </li>
+            <li class="nav__item nav__item--contact"><a href="/contact/">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div id="page" class="site nav__push js-nav-push">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ssnblog' ); ?></a>
 
     <header class="site-header" role="banner">
-      <a class="site-header__branding" href="<?php echo get_site_url (); ?>">
+        <a class="site-header__branding" href="<?php echo get_site_url (); ?>">
         <img src="<?php echo get_site_url ();  ?>/wp-content/themes/ssnblog/images/site_icon.svg" class="branding__logo" alt="street support logo">
         <span class="branding__text">Street Support</span>
-      </a>
-      
-      <button class="btn btn--plain btn--brand-e site-header__nav-button js-nav-open">
+        </a>
+        
+        <button class="btn btn--plain btn--brand-d site-header__nav-button js-nav-open">
         <span class="btn__text">Menu</span>
-      </button>
+        </button>
     </header>
 
     <div id="content" class="site-content">
