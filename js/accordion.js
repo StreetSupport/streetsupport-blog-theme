@@ -29,6 +29,7 @@ function Accordion () {
     // Add click listener to headers
     for (i = 0; i < headers.length; i++) {
       headers[i].addEventListener('click', function (e) {
+        console.log('click')
         self.open(this, el)
       })
     }

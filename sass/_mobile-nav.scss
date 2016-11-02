@@ -96,7 +96,7 @@
     &--sub-list {
       list-style: none;
       margin: 0;
-      padding: 0;
+      padding: 0 0 0 10px;
     }
   }
 
@@ -110,12 +110,8 @@
       border-top: 1px solid $brand-b;
       border-bottom: 1px solid $brand-b;
 
-      ul {
-        display: none;
-      }
-
       ul a {
-        color: $brand-k;
+        color: white;
       }
     }
 
@@ -190,3 +186,12 @@
   border: none;
   float: right;
 }
+
+
+.category-latest-news .nav__item--latest-news,
+.category-articles .nav__item--articles,
+.category-stories .nav__item--stories { 
+  a {
+    text-decoration: underline 
+  }
+} 

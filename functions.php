@@ -121,6 +121,7 @@ function ssnblog_scripts() {
 	wp_enqueue_style( 'ssnblog-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'ssnblog-navigation', get_template_directory_uri() . '/js/nav.js', array(), '20160614', true );
+	wp_enqueue_script( 'ssnblog-accordion', get_template_directory_uri() . '/js/accordion.js', array(), '20160614', true );
 
 // Hides the default primary menu when screen size is adjusted.
 //	wp_enqueue_script( 'ssnblog-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
