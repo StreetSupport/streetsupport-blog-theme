@@ -65,7 +65,7 @@
 			&:nth-child(3n+3) {padding-left: 20px; }
 		}
 		&__news-image {
-			height: 250px;
+			height: 150px;
 			position: relative;
 			.entry-title{
 				line-height: 1.4em;
@@ -78,6 +78,10 @@
 				font-size: 1.5em;
 				@extend .textShadow;
 			}
+		}
+
+		&__news-title {
+			color: #5a497f;
 		}
 	}
 
