@@ -1,9 +1,9 @@
 var gulp = require('gulp')
 var sass = require('gulp-sass')
 
-var postcss      = require('gulp-postcss');
-var sourcemaps   = require('gulp-sourcemaps');
-var autoprefixer = require('autoprefixer');
+var postcss = require('gulp-postcss')
+var sourcemaps = require('gulp-sourcemaps')
+var autoprefixer = require('autoprefixer')
 
 var browserSync = require('browser-sync').create()
 
