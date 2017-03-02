@@ -8,13 +8,20 @@
 	padding-right: 1em !important;
 }
 
+.social-share {
+  text-align:center;
+@include mq($from: m) {
+  text-align:left;
+}
+}
+
 .site-content {
 	@include mq($from: m) {
 		margin-top: 82px;
 	}
 }
 
-.site-content, 
+.site-content,
 article {
 	background-color: white;
 }
@@ -57,7 +64,7 @@ img.wp-image-25.alignright {
 
 
 .post {
-	&__heading, 
+	&__heading,
 	&__heading a {
 		margin-top: 45px;
 		margin-bottom: 45px;
