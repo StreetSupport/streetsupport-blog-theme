@@ -14,19 +14,18 @@ Template Name: front-page
 	</div>
 </header>
 <div class="block__content">
-		<?php query_posts('category_name=stories&showposts=1');
-			while ( have_posts() ) : the_post();
-		$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
-		endwhile;
-		?>
-	<div class="main-image-block" style="background-image: url(<?php echo $src[0]; ?> ) !important;">
-		<div id="latest-stories-posts" class="container-post-excerpt">
+  <?php query_posts('category_name=stories&showposts=1');
+    while ( have_posts() ) : the_post();
+  $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
+  endwhile;
+  ?>
+  	<div class="main-image-block" style="background-image: url(<?php echo $src[0]; ?> ) !important;">
+      <div id="latest-stories-posts" class="container-post-excerpt">
+
+
 			<div class="text-wrap-div">
 				<h3><a class="read-more" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">Latest Story</a></h3>
-				<?php query_posts('category_name=stories&showposts=1');
-				while ( have_posts() ) : the_post();
-				get_template_part( 'template-parts/content-front-page-catexcerpt', 'page' );
-				endwhile; ?>
+				<?php get_template_part( 'template-parts/content-front-page-catexcerpt', 'page' );?>
 			</div>
 			<a class="main-image-block__more-link" href="<?php echo get_site_url(); ?>/category/stories">More Stories</a>
 		</div>
