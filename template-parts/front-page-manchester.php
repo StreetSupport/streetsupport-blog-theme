@@ -43,7 +43,7 @@ Template Name: front-page-manchester
         ?>
 			</div>
 
-			<a class="main-image-block__more-link" href="<?php echo get_site_url(); ?>/category/articles/?tag=manchester">More Articles</a>
+			<a class="main-image-block__more-link" href="<?php echo get_site_url(); ?>/category/articles/?tag=manchester">More Manchester Articles</a>
 		</div>
 	</div>
 </div>
