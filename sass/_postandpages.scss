@@ -9,9 +9,9 @@
 }
 
 .social-share {
-  text-align:center;
-@include mq($from: m) {
-  text-align:left;
+	text-align:center;
+	@include mq($from: m) {
+		text-align:left;
 }
 }
 
