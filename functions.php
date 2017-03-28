@@ -158,20 +158,21 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 function get_the_archive_categoryOrTagName() {
-    if ( is_archive() ) {
-        echo single_month_title( ' ', false );
-    }
 
     if ( is_category() ) {
         echo single_cat_title( ' ', false );
-    } 
+    }
 
-    if ( is_tag() ) {
+    elseif ( is_tag() ) {
         echo ucwords(single_tag_title( ' ', false ));
     }
 
-    if ( is_author() ) {
-        echo '<span class="vcard">' . get_the_author() . '</span>' ;
+    elseif ( is_author() ) {
+        echo '<span class="vcard">' . get_the_author() . '</span>';
+    }
+
+    elseif ( is_archive() ) {
+        echo single_month_title( ' ', false );
     }
 }
 
@@ -188,13 +189,13 @@ add_filter( 'get_the_archive_title', function ($leaf) {
 		}
 
     if ( is_archive() ) {
-			
+
 				$title .= single_month_title( ' ', false );
 
     }
 
     if ( is_category() ) {
-			
+
 				$title .= single_cat_title( ' ', false );
 
     } elseif ( is_tag() ) {
