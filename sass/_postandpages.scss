@@ -12,7 +12,7 @@
 	text-align:center;
 	@include mq($from: m) {
 		text-align:left;
-}
+	}
 }
 
 .site-content {
