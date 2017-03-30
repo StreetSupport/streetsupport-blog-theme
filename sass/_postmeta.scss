@@ -3,8 +3,13 @@
 }
 
 .entry-meta {
+  font-size: 0.75em;
+  padding-bottom: 2em;
+  @include mq($from:m) {
     float: right !important;
-    font-size: 0.75em;
+    padding-bottom: 0em;
+    padding-top: 0.5em;
+  }
 }
 
 time.entry-date.published {
