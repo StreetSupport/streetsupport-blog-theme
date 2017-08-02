@@ -61,7 +61,7 @@
     <div class="sticky">
         <header class="header header--desktop">
             <div class="container">
-                <a class="site-header__branding" href="<?php echo get_site_url (); ?>">
+                <a class="site-header__branding" href="https://streetsupport.net/">
                     <img src="<?php echo get_site_url ();  ?>/wp-content/themes/ssnblog/images/site_icon.svg" class="branding__logo" alt="street support logo">
                     <span class="branding__text">Street Support</span>
                 </a>
@@ -132,7 +132,7 @@
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ssnblog' ); ?></a>
 
     <header class="site-header" role="banner">
-        <a class="site-header__branding" href="<?php echo get_site_url (); ?>">
+        <a class="site-header__branding" href="https://streetsupport.net/">
         <img src="<?php echo get_site_url ();  ?>/wp-content/themes/ssnblog/images/site_icon.svg" class="branding__logo" alt="street support logo">
         <span class="branding__text">Street Support</span>
         </a>
