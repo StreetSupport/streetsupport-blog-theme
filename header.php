@@ -87,6 +87,7 @@
                         <li class="nav__item nav__item--sub-item nav__item--latestnews"><a href="/category/latest-news/">News</a></li>
                     </ul>
                 </li>
+                <li class="nav__item nav__item--toolkit"><a href="https://streetsupport.net/manchester/standards-toolkit/">Standards Toolkit</a></li>
             </ul>
         </nav>
     </div>
@@ -114,6 +115,11 @@
             </li>
             <li class="nav__item nav__item--charter"><a href="https://charter.streetsupport.net">Charter</a></li>
             <li class="nav__item nav__item--bigchange"><a href="https://streetsupport.net/manchester/bigchangemcr/">Big Change</a></li>
+            
+            <li class="nav__item nav__item--toolkit">
+            <a href="https://streetsupport.net/manchester/standards-toolkit/">Standards Toolkit</a>
+            </li>
+
             <li class="nav__item nav__item--about"><a href="https://streetsupport.net/about/">About</a></li>
             <li class="nav__item nav__item--news">
                 <a href="/">News</a>
