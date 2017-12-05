@@ -79,7 +79,7 @@ function ssnblog_setup() {
 
 	add_image_size ('front-page-news', 650, 250, true);
 	add_image_size ('archive-listing', 1024, 640, true);
-    
+
 }
 endif;
 add_action( 'after_setup_theme', 'ssnblog_setup' );
@@ -211,3 +211,36 @@ add_filter( 'get_the_archive_title', function ($leaf) {
     return $title;
 
 });
+
+add_action( 'init', 'create_locations_taxonomy', 0 );
+
+// a Locations taxonomy for categorising posts by city showing in the WP-API
+function create_locations_taxonomy() {
+
+
+  $labels = array(
+    'name' => _x( 'Locations', 'taxonomy general name' ),
+    'singular_name' => _x( 'Location', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Locations' ),
+    'all_items' => __( 'All Locations' ),
+    'parent_item' => __( 'Parent Location' ),
+    'parent_item_colon' => __( 'Parent Location:' ),
+    'edit_item' => __( 'Edit Location' ),
+    'update_item' => __( 'Update Location' ),
+    'add_new_item' => __( 'Add New Location' ),
+    'new_item_name' => __( 'New Location Name' ),
+    'menu_name' => __( 'Locations' ),
+  );
+
+
+  register_taxonomy('locations',array('post'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+		'show_in_rest'      => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'location' ),
+  ));
+
+}
