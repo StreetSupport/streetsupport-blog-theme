@@ -84,6 +84,11 @@ function ssnblog_setup() {
 endif;
 add_action( 'after_setup_theme', 'ssnblog_setup' );
 
+function add_cors_http_header(){
+	header("Access-Control-Allow-Origin: *");
+}
+add_action('init','add_cors_http_header');
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
