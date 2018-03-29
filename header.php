@@ -71,6 +71,7 @@
                         <li class="nav__item nav__item--news nav__item--active"><a href="/">News</a></li>
                         <li class="nav__item nav__item--contact"><a href="https://streetsupport.net/contact/">Contact Us</a></li>
                         <li class="nav__item nav__item--contact"><a href="https://streetsupport.net/impact/">Impact</a></li>
+                        <li class="nav__item nav__item--contact"><a href="https://streetsupport.net/jobs/">Jobs</a></li>
                     </ul>
                 </nav>
             </div>
