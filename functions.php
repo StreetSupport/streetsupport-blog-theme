@@ -84,10 +84,13 @@ function ssnblog_setup() {
 endif;
 add_action( 'after_setup_theme', 'ssnblog_setup' );
 
-function add_cors_http_header(){
-	header("Access-Control-Allow-Origin: *");
-}
-add_action('init','add_cors_http_header');
+add_action( 'send_headers', function() {
+	if ( ! did_action('rest_api_init') && $_SERVER['REQUEST_METHOD'] == 'HEAD' ) {
+		header("Access-Control-Allow-Origin: *");
+		header("Access-Control-Expose-Headers: Link");
+		header("Access-Control-Allow-Methods: HEAD");
+	}
+} );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
