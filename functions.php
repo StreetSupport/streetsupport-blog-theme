@@ -84,13 +84,18 @@ function ssnblog_setup() {
 endif;
 add_action( 'after_setup_theme', 'ssnblog_setup' );
 
-add_action( 'send_headers', function() {
-	if ( ! did_action('rest_api_init') && $_SERVER['REQUEST_METHOD'] == 'HEAD' ) {
-		header("Access-Control-Allow-Origin: *");
-		header("Access-Control-Expose-Headers: Link");
-		header("Access-Control-Allow-Methods: HEAD");
-	}
-} );
+add_action( 'rest_api_init', function() {
+
+	remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
+	add_filter( 'rest_pre_serve_request', function( $value ) {
+		header( 'Access-Control-Allow-Origin: *' );
+		header( 'Access-Control-Allow-Methods: HEAD, GET' );
+		header( 'Access-Control-Allow-Credentials: true' );
+
+		return $value;
+
+	});
+}, 15 );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
