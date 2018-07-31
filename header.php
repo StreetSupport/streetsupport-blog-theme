@@ -24,17 +24,6 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-PVPXCXT');</script>
   <!-- End Google Tag Manager -->
-
-  <script>
-    (function(d) {
-      var config = {
-        kitId: 'efe1dsh',
-        scriptTimeout: 3000,
-        async: true
-      },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-  </script>
   <script>
     WebFontConfig = {
       custom: ['museo_sans_rounded500']
@@ -57,7 +46,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVPXCXT"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    
+
     <div class="sticky">
         <header class="header header--desktop">
             <div class="container">
@@ -117,7 +106,7 @@
             </li>
             <li class="nav__item nav__item--charter"><a href="https://charter.streetsupport.net">Charter</a></li>
             <li class="nav__item nav__item--bigchange"><a href="https://streetsupport.net/manchester/bigchangemcr/">Big Change</a></li>
-            
+
             <li class="nav__item nav__item--toolkit">
             <a href="https://streetsupport.net/manchester/standards-toolkit/">Standards Toolkit</a>
             </li>
@@ -144,7 +133,7 @@
         <img src="<?php echo get_site_url ();  ?>/wp-content/themes/ssnblog/images/site_icon.svg" class="branding__logo" alt="street support logo">
         <span class="branding__text">Street Support</span>
         </a>
-        
+
         <button class="btn btn--plain btn--brand-d site-header__nav-button js-nav-open">
         <span class="btn__text">Menu</span>
         </button>
