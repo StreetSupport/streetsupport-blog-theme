@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +18,8 @@
   "dependencies": {
     "autoprefixer": "^6.5.3",
     "gulp-postcss": "^6.2.0",
-    "gulp-sourcemaps": "^2.2.0"
-  }
+    "gulp-sourcemaps": "^2.2.0",
+    "snyk": "^1.36.2"
+  },
+  "snyk": true
 }
