@@ -153,6 +153,8 @@ $columned-dropdown-column-count: 3;
 
     &.sub-nav-is-active {
       transform: translate3d(-($nav-width), 0, 0) !important;
+
+      & .nav__group > .nav__item > a { border: none; }
     }
 
     .nav__push {
@@ -243,13 +245,14 @@ $columned-dropdown-column-count: 3;
           display: block;
           background: none;
           border: none;
+          font-size: 1rem;
           padding-left: 20px;
           &::before {
             content: '';
             width: 0;
             height: 0;
             margin-left: 10px;
-            top: 1.6em;
+            top: 1.3em;
             left: 0px;
             position: absolute;
             border-bottom: 5px solid transparent;
@@ -262,7 +265,7 @@ $columned-dropdown-column-count: 3;
           right: 50%;
           position: absolute;
           padding-right: 10px;
-          top: 1.2em;
+          top: 0.9em;
         }
       }
 

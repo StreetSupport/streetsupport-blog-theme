@@ -53,8 +53,4 @@ var close = function (e) {
   }
 }
 
-module.exports = {
-  init: init,
-  open: open,
-  close: close
-}
+init()
