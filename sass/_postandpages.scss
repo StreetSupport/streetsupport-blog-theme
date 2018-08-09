@@ -15,12 +15,6 @@
 	}
 }
 
-.site-content {
-	@include mq($from: m) {
-		margin-top: 82px;
-	}
-}
-
 .site-content,
 article {
 	background-color: white;

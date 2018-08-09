@@ -15,7 +15,9 @@ $mq-breakpoints: (
   s:   480px,
   m:   700px,
   l:   800px,
-  xl:  960px
+  xl:  960px,
+  xxl: 1024px,
+  xxxl: 1280px
 );
 
 // Define the breakpoint from the $mq-breakpoints list that should
@@ -43,6 +45,13 @@ $brand-k: #48484a;
 $brand-l: #29272a;
 $brand-m: #101011;
 $brand-n: #9886bf;
+$brand-p: #086149;
+$brand-q: #f3f3f3;
+$brand-r: #0A8564;
+$brand-s: #E1B500;
+
+$big-change-a: #fff77a;
+$big-change-b: #404241;
 
 // Typography
 $font-primary: 'museo_sans_rounded300', sans-serif;
@@ -59,7 +68,7 @@ $header-margin: 44px;
 $header-subnav-height: 83px;
 $header-subnav-margin: 83px;
 
-$nav-width: 220px;
+$nav-width: 100%;
 
 // z-indices
 $zIndex-modal: 200;
@@ -69,3 +78,8 @@ $zIndex-navOverlay: 140;
 $zIndex-fixedHeader: 120;
 $zIndex-SubNav: 100;
 $zIndex-breadcrumb: 80;
+
+
+// Used to automatically generate active CSS classes - also see _generated-variables.scss, created by gulp task
+$nav-sections: home findhelp givehelp hubs charter bigchange organisations impact about contact toolkit;
+$nav-pages: home findhelp emergencyhelp swep allorganisations givehelp giveitems volunteer offeritems donate partnership charter readthecharter pledgeyoursupport joinactiongroup aboutthecharter bigchange bigchangeabout bigchangepartners toolkit best-practice awards benefits training get-in-touch apply impact about contact jobs team trustees locations; 

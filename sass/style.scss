@@ -1,5 +1,7 @@
 @import 'mq';
 @import 'mixins';
+@import 'generated-variables';
+@import 'generated-location-nav-variables';
 @import 'variables';
 @import 'buttons';
 @import 'underscores';
@@ -20,5 +22,4 @@
 @import 'widget';
 @import 'block';
 @import 'container';
-@import 'desktop-nav';
-@import 'mobile-nav';
+@import 'nav';
